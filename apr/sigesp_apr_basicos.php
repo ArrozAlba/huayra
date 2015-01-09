@@ -49,7 +49,7 @@ a:active {
     <td width="570" height="30" class="cd-logo"><img src="../shared/imagebank/header.jpg" width="780" height="40"></td>
   </tr>
   <tr>
-    <td height="20" bgcolor="#E7E7E7" class="cd-menu"><script type="text/javascript" language="JavaScript1.2" src="js/menu2.js"></script></td>
+    <td height="20" bgcolor="#E7E7E7" class="cd-menu"><script type="text/javascript" language="JavaScript1.2" src="js/menu2.js"></script><b>Base Destino: </b><?php echo $_SESSION["ls_data_des"];?></td>
   </tr>  
   <tr>
     <td height="20" bgcolor="#FFFFFF" class="toolbar"><a href="javascript:ue_cerrar();"><img src="../shared/imagebank/tools20/salir.gif" alt="Salir" width="20" height="20" border="0"></a><a href="javascript: ue_descargar('<?PHP print $ls_ruta;?>');"><img src="../shared/imagebank/tools20/download.gif" alt="Salir" width="20" height="20" border="0"></a></td>

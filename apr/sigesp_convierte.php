@@ -80,7 +80,7 @@
 
 <table width="780" border="0" align="center" cellpadding="1" cellspacing="0" class="contorno">
   <tr>
-    <td height="20" bgcolor="#FFFFFF" class="toolbar"><a href="javascript:ue_nuevo();"></a><a href="javascript:ue_cerrar();"><img src="../shared/imagebank/tools20/salir.gif" alt="Salir" width="20" height="20" border="0"></a></td>
+    <td height="20" bgcolor="#FFFFFF" class="toolbar"><a href="javascript:ue_nuevo();"></a><a href="javascript:ue_cerrar();"><img src="../shared/imagebank/tools20/salir.gif" alt="Salir" width="20" height="20" border="0"></a><b>Base Destino: </b><?php echo $_SESSION["ls_data_des"];?></td>
   </tr>
 </table>
 <p>&nbsp;</p>
