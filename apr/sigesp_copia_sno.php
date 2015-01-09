@@ -37,7 +37,10 @@ class sigesp_copia_sno {
 		$this->io_fecha           = new class_fecha();
 		$io_conect	              = new sigesp_include();
 		$io_conexion_origen       = $io_conect->uf_conectar();
-		$io_conexion_destino       = $io_conect->uf_conectar($this->ls_database_target);
+		// $io_conexion_destino      = $io_conect->uf_conectar($this->ls_database_target);
+		$io_conexion_destino      = $io_conect->uf_conectar_destino($this->ls_database_target);
+		//var_dump($io_conexion_destino);
+		//var_dump($io_conexion_origen);
 		$this->io_sql_origen      = new class_sql($io_conexion_origen);
 		$this->io_sql_destino 	  = new class_sql($io_conexion_destino);
 		$this->sno_historico 	  = new sigesp_copia_sno_historico();
@@ -107,7 +110,7 @@ class sigesp_copia_sno {
 		$this->io_sql_destino->begin_transaction();
 		//------------------------------------ Insertar datos básicos fuera de la nómina -----------------------------------------
 		if($lb_valido)
-		{	
+		{	//listo 09 14:35
 			$lb_valido=$this->uf_insert_profesion();
 		}
 		if($lb_valido)
@@ -244,7 +247,6 @@ class sigesp_copia_sno {
 					}				
 					if($lb_valido)
 					{
-					print 'paso222222222222222222<br>';
 						$lb_valido=$this->uf_insert_periodos($ls_codemp,$ls_codnom,$ls_codnomnuevo);
 					}
 					if($lb_valido)
@@ -1417,10 +1419,9 @@ class sigesp_copia_sno {
 				if(($ls_codescdoc!="")&&($ls_codcladoc!=""))
 				{
 					$ls_sql="INSERT INTO sno_clasificaciondocente(codemp, codescdoc, codcladoc, descladoc, tiesercladoc, suesupcladoc, ".
-							"suedircladoc, suedoccladoc, suesupcladocaux, suedircladocaux, suedoccladocaux) VALUES ".
+							"suedircladoc, suedoccladoc) VALUES ".
 							"('".$ls_codemp."','".$ls_codescdoc."','".$ls_codcladoc."','".$ls_descladoc."','".$ls_tiesercladoc."',".
-							"".$li_suesupcladoc.",".$li_suedircladoc.",".$li_suedoccladoc.",".$li_suesupcladocaux.",".$li_suedircladocaux.",".
-							"".$li_suedoccladocaux.")";
+							"".$li_suesupcladoc.",".$li_suedircladoc.",".$li_suedoccladoc.")";
 							print $ls_sql.'<br>';
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)
@@ -1721,9 +1722,9 @@ class sigesp_copia_sno {
 		$ls_sql="SELECT codemp, codper, cedper, nomper, apeper, dirper, fecnacper, edocivper, telhabper, telmovper, sexper, ".
 				"		estaper, pesper, codpro, nivacaper, catper, cajahoper, numhijper, contraper, tipvivper, tenvivper, ".
 				"		monpagvivper, ingbrumen, cuecajahoper, cuelphper, cuefidper, fecingadmpubper, vacper, porisrper, ".
-				"		fecingper, anoservpreper, cedbenper, fecegrper, estper, fotper, codpai, codest, codmun, codpar, ".
+				"		fecingper, anoservpreper, cedbenper, fecegrper, estper, fotper, codpai, codest, codmun, codpar, codtippersss, ".
 				"		obsper, cauegrper, obsegrper, nacper, coreleper, cenmedper, turper, horper, hcmper, tipsanper, ".
-				"		codcom, codran, numexpper, codpainac, codestnac ".
+				"		codcom, codran, numexpper, codpainac, codestnac, anoservprecont, anoservprefijo ".
 				"  FROM sno_personal ";
 		$io_recordset=$this->io_sql_origen->select($ls_sql);
 		if($io_recordset===false)
@@ -1780,6 +1781,7 @@ class sigesp_copia_sno {
 				$ls_codest = $this->io_validacion->uf_valida_texto($row["codest"],0,3,"");
 				$ls_codmun = $this->io_validacion->uf_valida_texto($row["codmun"],0,3,"");
 				$ls_codpar = $this->io_validacion->uf_valida_texto($row["codpar"],0,3,"");
+
 				$ls_obsper    = $this->io_validacion->uf_valida_texto($row["obsper"],0,254,"");
 				$ls_cauegrper = $this->io_validacion->uf_valida_texto($row["cauegrper"],0,1,""); 
 				$ls_obsegrper = $this->io_validacion->uf_valida_texto($row["obsegrper"],0,254,"");
@@ -1803,7 +1805,7 @@ class sigesp_copia_sno {
 							"			 sexper,estaper,pesper,codpro,nivacaper,catper,cajahoper,numhijper,contraper,tipvivper,tenvivper,".
 							"			 monpagvivper,ingbrumen,cuecajahoper,cuelphper,cuefidper,fecingadmpubper,vacper,porisrper,fecingper,".
 							"			 anoservpreper,cedbenper,fecegrper,estper,fotper,codpai,codest,codmun,codpar,obsper,cauegrper,obsegrper,".
-							"			 nacper,coreleper,cenmedper,turper, horper, hcmper, tipsanper, monpagvivperaux, ingbrumenaux, codcom, ".
+							"			 nacper,coreleper,cenmedper,turper, horper, hcmper, tipsanper, codcom, ".
 							"			 codran, numexpper, codpainac, codestnac)".
 							"     VALUES ('".$ls_codemp."','".$ls_codper."','".$ls_cedper."','".$ls_nomper."','".$ls_apeper."','".$ls_dirper."',".
 							"			  '".$ld_fecnacper."','".$ls_edocivper."','".$ls_telhabper."','".$ls_telmovper."','".$ls_sexper."',".
@@ -1813,8 +1815,7 @@ class sigesp_copia_sno {
 							"			  '".$ls_vacper."',".$li_porisrper.",'".$ld_fecingper."',".$li_anoservpreper.",'".$ls_cedbenper."',".
 							"			  '".$ld_fecegrper."','".$ls_estper."','".$ls_fotper."','".$ls_codpai."','".$ls_codest."','".$ls_codmun."',".
 							"			  '".$ls_codpar."','".$ls_obsper."','".$ls_cauegrper."','".$ls_obsegrper."','".$ls_nacper."','".$ls_coreleper."',".
-							"			  '".$ls_cenmedper."','".$ls_turper."','".$ls_horper."','".$ls_hcmper."','".$ls_tipsanper."',".$li_monpagvivperaux.",".
-							"			  ".$li_ingbrumenaux.",'".$ls_codcom."','".$ls_codran."','".$ls_numexpper."','".$ls_codpainac."','".$ls_codestnac."')";
+							"			  '".$ls_cenmedper."','".$ls_turper."','".$ls_horper."','".$ls_hcmper."','".$ls_tipsanper."','".$ls_codcom."','".$ls_codran."','".$ls_numexpper."','".$ls_codpainac."','".$ls_codestnac."')";
 							print $ls_sql.'<br>';
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)
@@ -1891,6 +1892,7 @@ class sigesp_copia_sno {
 				$ls_codper = $this->io_validacion->uf_valida_texto($row["codper"],0,10,"");
 				$ls_codisr = $this->io_validacion->uf_valida_texto($row["codisr"],0,2,"");
 				$li_porisr = $this->io_validacion->uf_valida_monto($row["porisr"],0);
+				print ($li_codestrea) ;
 				if(($ls_codper!="")&&($li_codestrea!=""))
 				{
 					$ls_sql="INSERT INTO sno_personalisr(codemp, codper, codisr, porisr)".

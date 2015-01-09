@@ -56,12 +56,12 @@
 	$ls_modulo = "";	
 	if (array_key_exists("operacion",$_POST))
 	{
-		$ls_operacion = $_POST["operacion"];
-		$ls_modulo = $_POST['modulo'];
+		echo $ls_operacion = $_POST["operacion"];
+		echo $ls_modulo = $_POST['modulo'];
 	}
 	else
 	{
-		$ls_operacion ="";
+		echo $ls_operacion ="";
 	}	
 ?>
 
