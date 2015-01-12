@@ -3609,13 +3609,13 @@ class sigesp_copia_sno {
 				$li_moncomgra=$this->io_validacion->uf_valida_monto($row["moncomgra"],0);
 				/*$li_monsalgra=$this->io_rcbsf->uf_convertir_monedabsf($li_monsalgra,2,1,1000,1);
 				$li_moncomgra=$this->io_rcbsf->uf_convertir_monedabsf($li_moncomgra,2,1,1000,1);*/
-				$li_monsalgraaux=$this->io_validacion->uf_valida_monto($row["monsalgra"],0);
-				$li_moncomgraaux=$this->io_validacion->uf_valida_monto($row["moncomgra"],0);
+				//$li_monsalgraaux=$this->io_validacion->uf_valida_monto($row["monsalgra"],0);
+				//$li_moncomgraaux=$this->io_validacion->uf_valida_monto($row["moncomgra"],0);
 				if(($ls_codnom!="")&&($ls_codtab!="")&&($ls_codpas!="")&&($ls_codgra!=""))
 				{
-					$ls_sql="INSERT INTO sno_grado(codemp,codnom,codtab,codpas,codgra,monsalgra,moncomgra, moncomgraaux, monsalgraaux)".
+					$ls_sql="INSERT INTO sno_grado(codemp,codnom,codtab,codpas,codgra,monsalgra,moncomgra)".
 							"     VALUES ('".$ls_codemp."','".$ls_codnom."','".$ls_codtab."','".$ls_codpas."','".$ls_codgra."',".
-							"			   ".$li_monsalgra.",".$li_moncomgra.",".$li_monsalgraaux.",".$li_moncomgraaux.")";
+							"			   ".$li_monsalgra.",".$li_moncomgra.")";
 							print '*****************************************->  '.$ls_sql.'<br>';
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)
