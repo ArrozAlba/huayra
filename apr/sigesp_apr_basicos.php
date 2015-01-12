@@ -84,7 +84,7 @@ a:active {
 	$io_validacion->uf_select_sistema_apertura("SCB",$ls_disablescb);
 	$io_validacion->uf_select_sistema_apertura("SAF",$ls_disablesaf);
 	$io_validacion->uf_select_sistema_apertura("SCV",$ls_disablescv);
-	$io_validacion->uf_select_sistema_apertura("SNO",$ls_disablesno);
+	//$io_validacion->uf_select_sistema_apertura("SNO",$ls_disablesno);
 
 	if(array_key_exists("operacion",$_POST)) // si existe la operación creamos las bd de origen y destino
 	{
