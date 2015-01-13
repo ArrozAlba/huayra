@@ -4140,11 +4140,10 @@ class sigesp_copia_sno {
 
 				if(($ls_codnom!="")&&($ls_codcons!=""))
 				{
-					$ls_sql="INSERT INTO sno_constante(codemp,codnom,codcons,nomcon,unicon,equcon,topcon,valcon,reicon,tipnumcon, equconaux, ".
-							"			 topconaux, valconaux, conespseg)".
+					$ls_sql="INSERT INTO sno_constante(codemp,codnom,codcons,nomcon,unicon,equcon,topcon,valcon,reicon,tipnumcon, ".
+							"			 conespseg)".
 							"     VALUES ('".$ls_codemp."','".$ls_codnom."','".$ls_codcons."','".$ls_nomcon."','".$ls_unicon."',".
-							"			  ".$li_equcon.",".$li_topcon.",".$li_valcon.",".$li_reicon.",'".$ls_tipnumcon."',".$li_equconaux.",".
-							"			  ".$li_topconaux.",".$li_valconaux.",'".$ls_conespseg."')";
+							"			  ".$li_equcon.",".$li_topcon.",".$li_valcon.",".$li_reicon.",'".$ls_tipnumcon."','".$ls_conespseg."')";
 							print '*****************************************->  '.$ls_sql.'<br>';
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)

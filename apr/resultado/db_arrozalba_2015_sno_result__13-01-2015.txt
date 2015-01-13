@@ -5816,3 +5816,845 @@ INSERT INTO sno_constante(codemp,codnom,codcons,nomcon,unicon,equcon,topcon,valc
    Tabla Origen  sno_constante Registros 29 
    Tabla Destino sno_constante Registros 0 
 //*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_profesion Registros 182 
+   Tabla Destino sno_profesion Registros 182 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_unidadadmin Registros 42 
+   Tabla Destino sno_unidadadmin Registros 42 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_proyecto Registros 0 
+   Tabla Destino sno_proyecto Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_constanciatrabajo Registros 3 
+   Tabla Destino sno_constanciatrabajo Registros 3 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_cestaticket Registros 0 
+   Tabla Destino sno_cestaticket Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_cestaticunidadadm Registros 0 
+   Tabla Destino sno_cestaticunidadadm Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_tablavacacion Registros 1 
+   Tabla Destino sno_tablavacacion Registros 1 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_tablavacperiodo Registros 14 
+   Tabla Destino sno_tablavacperiodo Registros 14 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_dedicacion Registros 4 
+   Tabla Destino sno_dedicacion Registros 4 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_tipopersonal Registros 22 
+   Tabla Destino sno_tipopersonal Registros 22 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_escaladocente Registros 1 
+   Tabla Destino sno_escaladocente Registros 1 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_clasificaciondocente Registros 1 
+   Tabla Destino sno_clasificaciondocente Registros 1 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_ubicacionfisica Registros 16 
+   Tabla Destino sno_ubicacionfisica Registros 16 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_componente Registros 7 
+   Tabla Destino sno_componente Registros 7 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_rango Registros 152 
+   Tabla Destino sno_rango Registros 152 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_personal Registros 873 
+   Tabla Destino sno_personal Registros 873 
+//*****************************************************************//
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000241757, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0000242511, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003878777, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012332047, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0014429236, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0003866991, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015138928, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016751915, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024762, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016914011, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0011078582, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020640513, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013604973, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024967443, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024661934, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715139, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016294085, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024024657, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012710612, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0024022946, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0017363834, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0015071694, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0021560292, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0019715928, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0016293453, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0013540229, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0012091897, Código IRS12  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS01  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS02  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS03  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS04  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS05  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS06  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS07  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS08  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS09  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS10  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS11  
+Hay data inconsistente en el isr del Personal. 
+Código Personal 0020643647, Código IRS12  
+//*****************************************************************//
+   Tabla Origen  sno_personalisr Registros 336 
+   Tabla Destino sno_personalisr Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_estudiorealizado Registros 0 
+   Tabla Destino sno_estudiorealizado Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_trabajoanterior Registros 0 
+   Tabla Destino sno_trabajoanterior Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_familiar Registros 0 
+   Tabla Destino sno_familiar Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_permiso Registros 0 
+   Tabla Destino sno_permiso Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_beneficiario Registros 0 
+   Tabla Destino sno_beneficiario Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_fideicomiso Registros 0 
+   Tabla Destino sno_fideicomiso Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_vacacpersonal Registros 0 
+   Tabla Destino sno_vacacpersonal Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_ipasme_dependencias Registros 0 
+   Tabla Destino sno_ipasme_dependencias Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_ipasme_afiliado Registros 0 
+   Tabla Destino sno_ipasme_afiliado Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_ipasme_beneficiario Registros 0 
+   Tabla Destino sno_ipasme_beneficiario Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_archivotxt Registros 0 
+   Tabla Destino sno_archivotxt Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_archivotxtcampo Registros 0 
+   Tabla Destino sno_archivotxtcampo Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_metodobanco Registros 53 
+   Tabla Destino sno_metodobanco Registros 53 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_nomina Registros 1 
+   Tabla Destino sno_nomina Registros 1 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_subnomina Registros 1 
+   Tabla Destino sno_subnomina Registros 1 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_cargo Registros 3 
+   Tabla Destino sno_cargo Registros 3 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_tabulador Registros 2 
+   Tabla Destino sno_tabulador Registros 2 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_grado Registros 2 
+   Tabla Destino sno_grado Registros 2 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_primagrado Registros 0 
+   Tabla Destino sno_primagrado Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_asignacioncargo Registros 1 
+   Tabla Destino sno_asignacioncargo Registros 1 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_personalnomina Registros 1 
+   Tabla Destino sno_personalnomina Registros 1 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_proyectopersonal Registros 0 
+   Tabla Destino sno_proyectopersonal Registros 0 
+//*****************************************************************//
+//*****************************************************************//
+   Tabla Origen  sno_constante Registros 29 
+   Tabla Destino sno_constante Registros 29 
+//*****************************************************************//
+Error al Insertar la constante personal.
+Invalid query: ERROR:  no existe la columna «monconaux» en la relación «sno_constantepersonal»
+LINE 1: ...personal(codemp, codnom, codper, codcons, moncon, monconaux)...
+                                                             ^
+Whole query: INSERT INTO sno_constantepersonal(codemp, codnom, codper, codcons, moncon, monconaux) VALUES ('0001','0001','0012262363','0000000252',0,0)
+INSERT INTO sno_constantepersonal(codemp, codnom, codper, codcons, moncon, monconaux) VALUES ('0001','0001','0012262363','0000000252',0,0)
+//*****************************************************************//
+   Tabla Origen  sno_constantepersonal Registros 29 
+   Tabla Destino sno_constantepersonal Registros 0 
+//*****************************************************************//
