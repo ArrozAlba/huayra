@@ -3865,7 +3865,7 @@ class sigesp_copia_sno {
 				"		ofiuniadm, uniuniadm, depuniadm, prouniadm, pagbanper, codban, codcueban, tipcuebanper, codcar, ".
 				"		fecingper, staper, cueaboper, fecculcontr, codded, codtipper, quivacper, codtabvac, sueintper, ".
 				"		pagefeper, sueproper, codage, fecegrper, fecsusper, cauegrper, codescdoc, codcladoc, codubifis, ".
-				"		tipcestic, conjub, catjub, codclavia, codunirac, pagtaqper ".
+				"		tipcestic, conjub, catjub, codclavia, codunirac, pagtaqper, grado, fecascper, descasicar, coddep, salnorper, estencper ".
 				"  FROM sno_personalnomina".
 				" WHERE codemp= '".$as_codemp."' ".
 				"   AND codnom= '".$as_codnom."' ";
@@ -3885,6 +3885,14 @@ class sigesp_copia_sno {
 			   $li_total_select = $this->io_sql_origen->num_rows($io_recordset);
 			   while(($row=$this->io_sql_origen->fetch_row($io_recordset))&&$lb_valido)
 			   {
+			   	//nuevos campos Lunes 12 ENE 2015
+			   	$ls_grado 	   = $row["grado"];
+			   	$ls_fecascper  = $this->io_validacion->uf_valida_fecha($row["fecascper"],"1900-01-01");
+			   	$ls_descasicar = $row["descasicar"]; 
+			   	$ls_coddep     = $row["codded"]; 
+			   	$ls_salnorper  = $row["salnorper"]; 
+			   	$ls_estencper  = $row["estencper"]; 
+ 			   	//fin de nuevos campos 
 				$ls_codemp=$row["codemp"]; 
 				$ls_codnom=$as_codnomnuevo;//$this->io_validacion->uf_valida_texto($row["codnom"],0,4,"");
 				$ls_codper=$this->io_validacion->uf_valida_texto($row["codper"],0,10,"");
@@ -3941,7 +3949,7 @@ class sigesp_copia_sno {
 							"			 minorguniadm,ofiuniadm,uniuniadm,depuniadm,prouniadm,pagbanper,codban,codcueban,tipcuebanper,".
 							"			 codcar,fecingper,staper,cueaboper,fecculcontr,codded,codtipper,quivacper,codtabvac,sueintper,".
 							"			 pagefeper,sueproper,codage,fecegrper,fecsusper,cauegrper,codescdoc,codcladoc,codubifis,tipcestic, ".
-							"			 conjub,catjub,codclavia, sueperaux, sueintperaux, sueproperaux, codunirac, pagtaqper)".
+							"			 conjub,catjub,codclavia, codunirac, pagtaqper, grado, fecascper, descasicar, coddep, salnorper, estencper )".
 							"     VALUES ('".$ls_codemp."','".$ls_codnom."','".$ls_codper."','".$ls_codsubnom."','".$ls_codasicar."',".
 							"			 '".$ls_codtab."','".$ls_codgra."','".$ls_codpas."',".$li_sueper.",".$li_horper.",'".$ls_minorguniadm."',".
 							"			 '".$ls_ofiuniadm."','".$ls_uniuniadm."','".$ls_depuniadm."','".$ls_prouniadm."',".$li_pagbanper.",".
@@ -3950,9 +3958,8 @@ class sigesp_copia_sno {
 							"			 '".$ls_quivacper."','".$ls_codtabvac."',".$li_sueintper.",".$li_pagefeper.",".$li_sueproper.",".
 							"			 '".$ls_codage."','".$ld_fecegrper."','".$ld_fecsusper."','".$ls_cauegrper."','".$ls_codescdoc."',".
 							"			 '".$ls_codcladoc."','".$ls_codubifis."','".$ls_tipcestic."','".$ls_conjub."','".$ls_catjub."',".
-							"			 '".$ls_codclavia."',".$li_sueperaux.",".$li_sueintperaux.",".$li_sueproperaux.",'".$ls_codunirac."',".
-							"			 ".$li_pagtaqper.")";
-							print '*****************************************->  '.$ls_sql.'<br>';
+							"			 '".$ls_codclavia."','".$ls_codunirac."',".
+							"			 '".$li_pagtaqper."','".$ls_grado."','".$ls_fecascper."','".$ls_descasicar."','".$ls_coddep."','".$ls_salnorper."','".$ls_estencper."')";
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)
 					{
