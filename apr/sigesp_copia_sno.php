@@ -4457,11 +4457,10 @@ class sigesp_copia_sno {
 				$li_acuinipataux=$this->io_validacion->uf_valida_monto($row["acuinipat"],0);
 				if(($ls_codnom!="")&&($ls_codper!="")&&($ls_codconc!=""))
 				{
-					$ls_sql="INSERT INTO sno_conceptopersonal(codemp,codnom,codper,codconc,aplcon,valcon,acuemp,acuiniemp,acupat,acuinipat, ".
-							"			 acuinipataux, acupataux, acuiniempaux, acuempaux, valconaux)".
+					$ls_sql="INSERT INTO sno_conceptopersonal(codemp,codnom,codper,codconc,aplcon,valcon,acuemp,acuiniemp,acupat,acuinipat ".
+							")".
 							"     VALUES ('".$ls_codemp."','".$ls_codnom."','".$ls_codper."','".$ls_codconc."',".$li_aplcon.",".$li_valcon.",".
-							"			  ".$li_acuemp.",".$li_acuiniemp.",".$li_acupat.",".$li_acuinipat.",".$li_acuinipataux.",".$li_acupataux.",".
-							"			  ".$li_acuiniempaux.",".$li_acuempaux.",".$li_valconaux.")";
+							"			  ".$li_acuemp.",".$li_acuiniemp.",".$li_acupat.",".$li_acuinipat.")";
 							print '*****************************************->  '.$ls_sql.'<br>';
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)
