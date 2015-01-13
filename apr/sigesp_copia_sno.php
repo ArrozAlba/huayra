@@ -4228,8 +4228,8 @@ class sigesp_copia_sno {
 
 				if(($ls_codnom!="")&&($ls_codcons!=""))
 				{
-					$ls_sql="INSERT INTO sno_constantepersonal(codemp, codnom, codper, codcons, moncon, monconaux) VALUES ".
-							"('".$ls_codemp."','".$ls_codnom."','".$ls_codper."','".$ls_codcons."',".$li_moncon.",".$li_monconaux.")";
+					$ls_sql="INSERT INTO sno_constantepersonal(codemp, codnom, codper, codcons, moncon) VALUES ".
+							"('".$ls_codemp."','".$ls_codnom."','".$ls_codper."','".$ls_codcons."',".$li_moncon.")";
 							print '*****************************************->  '.$ls_sql.'<br>';
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)
