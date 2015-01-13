@@ -4353,15 +4353,14 @@ class sigesp_copia_sno {
 					$ls_sql="INSERT INTO sno_concepto(codemp,codnom,codconc,nomcon,titcon,sigcon,forcon,glocon,acumaxcon,valmincon,".
 							"			 valmaxcon,concon,cueprecon,cueconcon,aplisrcon,sueintcon,sueintvaccon,conprenom,intprocon,".
 							"			 codpro,forpatcon,cueprepatcon,cueconpatcon,titretempcon,titretpatcon,valminpatcon,valmaxpatcon,".
-							"			 codprov,cedben,aplarccon,acumaxconaux, valminconaux, valmaxconaux, valminpatconaux, valmaxpatconaux, ".
+							"			 codprov,cedben,aplarccon, ".
 							"			 conprocon)".
 							"     VALUES ('".$ls_codemp."','".$ls_codnom."','".$ls_codconc."','".$ls_nomcon."','".$ls_titcon."','".$ls_sigcon."',".
 							"			  '".$ls_forcon."',".$li_glocon.",".$li_acumaxcon.",".$li_valmincon.",".$li_valmaxcon.",'".$ls_concon."',".
 							"			  '".$ls_cueprecon."','".$ls_cueconcon."',".$li_aplisrcon.",".$li_sueintcon.",".$li_sueintvaccon.",".
 							"			  ".$li_conprenom.",'".$ls_intprocon."','".$ls_codpro."','".$ls_forpatcon."','".$ls_cueprepatcon."',".
 							"			  '".$ls_cueconpatcon."','".$ls_titretempcon."','".$ls_titretpatcon."',".$li_valminpatcon.",".
-							"			  ".$li_valmaxpatcon.",'".$ls_codprov."','".$ls_cedben."',".$li_aplarccon.",".$li_acumaxconaux.",".
-							"			  ".$li_valminconaux.",".$li_valmaxconaux.",".$li_valminpatconaux.",".$li_valmaxpatconaux.",'".$ls_conprocon."')";
+							"			  ".$li_valmaxpatcon.",'".$ls_codprov."','".$ls_cedben."',".$li_aplarccon.",'".$ls_conprocon."')";
 							print '*****************************************->  '.$ls_sql.'<br>';
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if($li_row===false)
