@@ -11,7 +11,7 @@ web/css/*
 web/js/*
 web/uploads/*
 sigesp_config.php
-
+sno/txt/*
 # -- Composer -----------------------------------------
 composer.phar
 
