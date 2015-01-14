@@ -48,7 +48,7 @@ function ue_copiar_sss_basico()
 {
 	$lb_valido=true;
 	$this->io_sql_destino->begin_transaction();
-	if ($lb_valido)
+	/*if ($lb_valido)
 	   {	
 		 $lb_valido=$this->uf_copiar_empresa();
 	   } 
@@ -95,16 +95,16 @@ function ue_copiar_sss_basico()
    if ($lb_valido)
 	  {	
 		$lb_valido = $this->uf_copiar_sistemas_ventanas();
-	  }  
-   if ($lb_valido)
+	  }  */
+  /* if ($lb_valido)
 	  {	
 		$lb_valido = $this->uf_copiar_permisos_internos();
-	  }  
-   if ($lb_valido)
+	  }  */
+  if ($lb_valido)
 	  {	
 		$lb_valido = $this->uf_copiar_derechos_usuarios();
 	  }  
-   if ($lb_valido)
+   /*if ($lb_valido)
 	  {	
 		$lb_valido = $this->uf_copiar_usuarios_grupos();
 	  }  
@@ -123,7 +123,7 @@ function ue_copiar_sss_basico()
    if ($lb_valido)
 	  {	
  	    $lb_valido = $this->uf_copiar_sigesp_dt_poliza();
-	  } 
+	  } */
 
    if ($lb_valido)
 	  {
@@ -152,190 +152,181 @@ function ue_copiar_sss_basico()
 
 function uf_copiar_empresa()
 {
-		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		//	     Function: uf_copiar_empresa
-		//		   Access: private
-		//	      Returns: lb_valido True si se ejecuto el insert ó False si hubo error en el insert
-		//	  Description: Función que selecciona la data de $as_database_source (base de datos origen) y los inserta en $as_dabatase_target (base de datos destino)
-		//	   Creado Por: 
-		// Fecha Creación: 20/11/2006 								Fecha Última Modificación : 	
-		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	     Function: uf_copiar_empresa
+//		   Access: private
+//	      Returns: lb_valido True si se ejecuto el insert ó False si hubo error en el insert
+//	  Description: Función que selecciona la data de $as_database_source (base de datos origen) y los inserta en $as_dabatase_target (base de datos destino)
+//	   Creado Por: 
+// Fecha Creación: 20/11/2006 								Fecha Última Modificación : 	
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$lb_valido=true;
 		$li_total_select=0;
 		$li_total_insert=0;
-		$ls_sql="SELECT codemp,nombre,titulo,sigemp,direccion,telemp,faxemp,email,website,m01,m02,m03,m04,m05,m06,m07,m08,m09,".
-				"		m10,m11,m12,periodo,vali_nivel,esttipcont,formpre,formcont,formplan,formspi,activo,pasivo,ingreso,gasto,".
-				"       resultado,capital,c_resultad,c_resultan,orden_d,orden_h,soc_gastos,soc_servic,gerente,jefe_compr,activo_h,".
-				"		pasivo_h,resultado_h,ingreso_f,gasto_f,ingreso_p,gasto_p,logo,numniv,nomestpro1,nomestpro2,nomestpro3,".
-				"		nomestpro4,nomestpro5,estvaltra,rifemp,nitemp,estemp,ciuemp,zonpos,estmodape,estdesiva,estprecom,estmodsepsoc,".
-				"		codorgsig,socbieser,estmodest,salinipro,salinieje,numordcom,numordser,numsolpag,nomorgads,numlicemp,modageret,".
-				"		nomres,concomiva,cedben,nomben,scctaben,estmodiva,activo_t,pasivo_t,resultado_t,c_financiera,c_fiscal,".
-				"		diacadche,codasiona,loncodestpro1,loncodestpro2,loncodestpro3,loncodestpro4,loncodestpro5,candeccon,".
-				"		tipconmon,redconmon,conrecdoc".
-				" FROM sigesp_empresa";
+		
+		$ls_sql = "SELECT codemp, nombre, titulo, sigemp, direccion, telemp, faxemp, email, website, m01, m02, m03, m04, m05, 
+		                  m06, m07, m08, m09, m10, m11, m12, periodo, vali_nivel, esttipcont, formpre, formcont, formplan, 
+						  formspi, activo, pasivo, ingreso, gasto, resultado, capital, c_resultad, c_resultan, orden_d, orden_h, 
+						  soc_gastos, soc_servic, gerente, jefe_compr, activo_h, pasivo_h, resultado_h, ingreso_f, gasto_f, 
+						  ingreso_p, gasto_p, logo, numniv, nomestpro1, nomestpro2, nomestpro3, nomestpro4, nomestpro5, estvaltra, 
+						  rifemp, nitemp, estemp, ciuemp, zonpos, estmodape, estdesiva, estprecom, estmodsepsoc, codorgsig, 
+						  socbieser, estmodest, salinipro, salinieje, numordcom, numordser, numsolpag, nomorgads, numlicemp, 
+						  modageret, nomres, concomiva, cedben, nomben, scctaben, estmodiva, activo_t, pasivo_t, resultado_t, 
+						  c_financiera, c_fiscal, codasiona
+					 FROM sigesp_empresa";
 		$io_recordset=$this->io_sql_origen->select($ls_sql);
 		if ($io_recordset===false)
-		{  
-			$lb_valido=false;
-			$ls_cadena="Problema al Copiar Empresa.\r\n".$this->io_sql_origen->message."\r\n";
-			$ls_cadena=$ls_cadena.$ls_sql."\r\n";
-			if ($this->lo_archivo)			
-			{
-				@fwrite($this->lo_archivo,$ls_cadena);
-			}
-		}
+		   {  
+			 $lb_valido=false;
+			 $ls_cadena="Problema al Copiar Empresa.\r\n".$this->io_sql_origen->message."\r\n";
+			 $ls_cadena=$ls_cadena.$ls_sql."\r\n";
+			 if ($this->lo_archivo)			
+			    {
+				  @fwrite($this->lo_archivo,$ls_cadena);
+			    }
+		   }
 		else
-		{			
-			$li_total_select = $this->io_sql_origen->num_rows($io_recordset);
-			while($row=$this->io_sql_origen->fetch_row($io_recordset))
-			{
-				$ls_codemp = $row["codemp"];
-				if (!empty($ls_codemp))
-				{
-                	$ls_nombre= $this->io_validacion->uf_valida_texto($row["nombre"],0,100,"SIGESP");
-					$ls_titulo= $this->io_validacion->uf_valida_texto($row["titulo"],0,100,"SIGESP");
-					$ls_sigemp= $this->io_validacion->uf_valida_texto($row["sigemp"],0,50,"");
-					$ls_diremp= $this->io_validacion->uf_valida_texto($row["direccion"],0,254,"");
-					$ls_telemp= $this->io_validacion->uf_valida_texto($row["telemp"],0,20,"");
-					$ls_faxemp= $this->io_validacion->uf_valida_texto($row["faxemp"],0,18,"");
-					$ls_email= $this->io_validacion->uf_valida_texto($row["email"],0,100,"");
-					$ls_website= $this->io_validacion->uf_valida_texto($row["website"],0,100,"");
-					$li_m01= $this->io_validacion->uf_valida_monto($row["m01"],0);
-					$li_m02= $this->io_validacion->uf_valida_monto($row["m02"],0);
-					$li_m03= $this->io_validacion->uf_valida_monto($row["m03"],0);
-					$li_m04= $this->io_validacion->uf_valida_monto($row["m04"],0);
-					$li_m05= $this->io_validacion->uf_valida_monto($row["m05"],0);
-		            $li_m06= $this->io_validacion->uf_valida_monto($row["m06"],0);
-					$li_m07= $this->io_validacion->uf_valida_monto($row["m07"],0);
-					$li_m08= $this->io_validacion->uf_valida_monto($row["m08"],0);
-					$li_m09= $this->io_validacion->uf_valida_monto($row["m09"],0);
-					$li_m10= $this->io_validacion->uf_valida_monto($row["m10"],0);
-					$li_m11= $this->io_validacion->uf_valida_monto($row["m11"],0);
-					$li_m12= $this->io_validacion->uf_valida_monto($row["m12"],0);
-					$ls_periodo= $this->io_validacion->uf_valida_fecha($row["periodo"],'1900-01-01');
-					$li_valniv = $this->io_validacion->uf_valida_monto($row["vali_nivel"],0);
-					$li_esttipcont = $this->io_validacion->uf_valida_monto($row["esttipcont"],0);
-					$ls_formpre = $this->io_validacion->uf_valida_texto(trim($row["formpre"]),0,30,"999-99-99-99");
-					$ls_formcont = $this->io_validacion->uf_valida_texto(trim($row["formcont"]),0,30,"999-99-99-99");
-					$ls_formplan = $this->io_validacion->uf_valida_texto(trim($row["formplan"]),0,30,"999-99-99-99");
-					$ls_formspi = $this->io_validacion->uf_valida_texto(trim($row["formspi"]),0,30,"999-99-99-99");
-					$li_activo = $this->io_validacion->uf_valida_texto(trim($row["activo"]),0,3,"0");
-					$li_pasivo = $this->io_validacion->uf_valida_texto(trim($row["pasivo"]),0,3,"0");
-					$li_ingreso = $this->io_validacion->uf_valida_texto(trim($row["ingreso"]),0,3,"0");
-					$li_gasto = $this->io_validacion->uf_valida_texto(trim($row["gasto"]),0,3,"0");
-					$li_resultado = $this->io_validacion->uf_valida_texto(trim($row["resultado"]),0,3,"0");
-					$li_capital = $this->io_validacion->uf_valida_texto(trim($row["capital"]),0,3,"0");
-					$ls_ctares = $this->io_validacion->uf_valida_texto(trim($row["c_resultad"]),0,25,"0");
-					$ls_cueres = $this->io_validacion->uf_valida_texto(trim($row["c_resultan"]),0,25,"0");
-					$ls_orden_d = $this->io_validacion->uf_valida_texto(trim($row["orden_d"]),0,3,"0");
-					$ls_orden_h = $this->io_validacion->uf_valida_texto(trim($row["orden_h"]),0,3,"0");
-					$ls_socgas = $this->io_validacion->uf_valida_texto(trim($row["soc_gastos"]),0,100,"0");
-					$ls_socser = $this->io_validacion->uf_valida_texto(trim($row["soc_servic"]),0,100,"0");
-					$ls_nomger = $this->io_validacion->uf_valida_texto(trim($row["gerente"]),0,50,"");
-					$ls_jefcom = $this->io_validacion->uf_valida_texto(trim($row["jefe_compr"]),0,50,"");
-					$ls_activo_h = $this->io_validacion->uf_valida_texto(trim($row["activo_h"]),0,3,"0");
-					$ls_pasivo_h = $this->io_validacion->uf_valida_texto(trim($row["pasivo_h"]),0,3,"0");
-					$ls_resultado_h  = $this->io_validacion->uf_valida_texto(trim($row["resultado_h"]),0,3,"0");
-					$ls_ingreso_f = $this->io_validacion->uf_valida_texto(trim($row["ingreso_f"]),0,3,"0");
-					$ls_gasto_f = $this->io_validacion->uf_valida_texto(trim($row["gasto_f"]),0,3,"0");
-					$ls_ingreso_p = $this->io_validacion->uf_valida_texto(trim($row["ingreso_p"]),0,3,"0");
-					$ls_gasto_p = $this->io_validacion->uf_valida_texto(trim($row["gasto_p"]),0,3,"0");
-					$ls_logo = $this->io_validacion->uf_valida_texto(trim($row["logo"]),0,500,"logo.jpg");
-					$li_numniv = $this->io_validacion->uf_valida_monto($row["numniv"],0);
-					$ls_nomestpro1 = $this->io_validacion->uf_valida_texto($row["nomestpro1"],0,40,"-");
-					$ls_nomestpro2 = $this->io_validacion->uf_valida_texto($row["nomestpro2"],0,40,"-");
-					$ls_nomestpro3 = $this->io_validacion->uf_valida_texto($row["nomestpro3"],0,40,"-");
-					$ls_nomestpro4 = $this->io_validacion->uf_valida_texto($row["nomestpro4"],0,40,"-");
-					$ls_nomestpro5 = $this->io_validacion->uf_valida_texto($row["nomestpro5"],0,40,"-");
-					$ls_estvaltra = $this->io_validacion->uf_valida_monto($row["estvaltra"],0);
-					$ls_rifemp = $this->io_validacion->uf_valida_texto(trim($row["rifemp"]),0,15,"");
-					$ls_nitemp = $this->io_validacion->uf_valida_texto(trim($row["nitemp"]),0,15,"");
-					$ls_estemp = $this->io_validacion->uf_valida_texto($row["estemp"],0,50,"");
-					$ls_ciuemp = $this->io_validacion->uf_valida_texto($row["ciuemp"],0,50,"");
-					$ls_zonpos = $this->io_validacion->uf_valida_texto($row["zonpos"],0,5,"");
-					$ls_estmodape = $this->io_validacion->uf_valida_monto($row["estmodape"],0);
-					$ls_estdesiva = $this->io_validacion->uf_valida_monto($row["estdesiva"],0);
-					$ls_estprecom = $this->io_validacion->uf_valida_monto($row["estprecom"],0);
-					$ls_estmodsepsoc = $this->io_validacion->uf_valida_monto($row["estmodsepsoc"],0);
-					$ls_codorgsig = $this->io_validacion->uf_valida_texto(trim($row["codorgsig"]),0,5,"");
-					$ls_socbieser = $this->io_validacion->uf_valida_monto($row["socbieser"],0);
-					$li_estmodest = $this->io_validacion->uf_valida_monto($row["estmodest"],0);
-					$ld_salinipro = $this->io_validacion->uf_valida_monto($row["salinipro"],0);
-	 	            $ld_salinieje = $this->io_validacion->uf_valida_monto($row["salinieje"],0);
-					$ls_numordcom = $this->io_validacion->uf_valida_texto($row["numordcom"],0,15,"000000000000000");
-					$ls_numordser = $this->io_validacion->uf_valida_texto($row["numordser"],0,15,"000000000000000");
-					$ls_numsolpag = $this->io_validacion->uf_valida_texto($row["numsolpag"],0,15,"000000000000000");
-					$ls_nomorgads = $this->io_validacion->uf_valida_texto($row["nomorgads"],0,254,"");
-					$ls_numlicemp = $this->io_validacion->uf_valida_texto($row["numlicemp"],0,25,"");
-					$ls_modageret = $this->io_validacion->uf_valida_texto($row["modageret"],0,1,"");
-					$ls_nomres    = $this->io_validacion->uf_valida_texto($row["nomres"],0,20,"");
-					$ls_concomiva = $this->io_validacion->uf_valida_texto($row["concomiva"],0,6,"");
-					$ls_cedben    = $this->io_validacion->uf_valida_texto(trim($row["cedben"]),0,10,"");
-					$ls_nomben    = $this->io_validacion->uf_valida_texto(trim($row["nomben"]),0,100,"");
-					$ls_scctaben  = $this->io_validacion->uf_valida_texto(trim($row["scctaben"]),0,25,"");
-					$ls_estmodiva =  $this->io_validacion->uf_valida_monto($row["estmodiva"],0);
-					$ls_activot   = $this->io_validacion->uf_valida_texto(trim($row["activo_t"]),0,3,"0");
-					$ls_pasivot   = $this->io_validacion->uf_valida_texto(trim($row["pasivo_t"]),0,3,"0");
-					$ls_resultadot= $this->io_validacion->uf_valida_texto(trim($row["resultado_t"]),0,3,"0");
-					$ls_ctafin    = $this->io_validacion->uf_valida_texto(trim($row["c_financiera"]),0,25,"0");
-					$ls_ctafis    = $this->io_validacion->uf_valida_texto(trim($row["c_fiscal"]),0,25,"0");
-					$ls_diacadche= $this->io_validacion->uf_valida_texto(trim($row["diacadche"]),0,3,"0");
-					$ls_codasiona = $this->io_validacion->uf_valida_texto(trim($row["codasiona"]),0,3,"");
-					$li_loncodestpro1 = $this->io_validacion->uf_valida_monto($row["loncodestpro1"],0);
-					$li_loncodestpro2 = $this->io_validacion->uf_valida_monto($row["loncodestpro2"],0);
-					$li_loncodestpro3 = $this->io_validacion->uf_valida_monto($row["loncodestpro3"],0);
-					$li_loncodestpro4 = $this->io_validacion->uf_valida_monto($row["loncodestpro4"],0);
-					$li_loncodestpro5 = $this->io_validacion->uf_valida_monto($row["loncodestpro5"],0);
-					$li_candeccon    = 2;
-					$ls_tipconmon    = 0;
-					$li_redconmon    = 1;
-					$ls_conrecdoc= $this->io_validacion->uf_valida_texto(trim($row["conrecdoc"]),0,1,"0");
-					$ls_sql="INSERT INTO sigesp_empresa (codemp,nombre,titulo,sigemp,direccion,telemp,faxemp,email,website,m01,".
-							"                            m02,m03,m04,m05,m06,m07,m08,m09,m10,m11,m12,periodo,vali_nivel,esttipcont,".
-							"                 		     formpre,formcont,formplan,formspi,activo,pasivo,ingreso,gasto,resultado,".
-							"       					 capital,c_resultad,c_resultan,orden_d,orden_h,soc_gastos,soc_servic,gerente,".
-							"							 jefe_compr,activo_h,pasivo_h,resultado_h,ingreso_f,gasto_f,ingreso_p,gasto_p,".
-							"							 logo,numniv,nomestpro1,nomestpro2,nomestpro3,nomestpro4,nomestpro5,estvaltra,".
-							"							 rifemp,nitemp,estemp,ciuemp,zonpos,estmodape,estdesiva,estprecom,estmodsepsoc,".
-							"							 codorgsig,socbieser,estmodest,salinipro,salinieje,numordcom,numordser,numsolpag,".
-							"							 nomorgads,numlicemp,modageret,nomres,concomiva,cedben,nomben,scctaben,estmodiva,".
-							"							 activo_t,pasivo_t,resultado_t,c_financiera,c_fiscal,diacadche,codasiona,".
-							"                            loncodestpro1,loncodestpro2,loncodestpro3,loncodestpro4,loncodestpro5,candeccon,".
-							"		                     tipconmon,redconmon,conrecdoc".
-							" VALUES ('".$ls_codemp."','".$ls_nombre."','".$ls_titulo."','".$ls_sigemp."','".$ls_diremp."',".
-							"		  '".$ls_telemp."','".$ls_faxemp."','".$ls_email."','".$ls_website."',".$li_m01.",".$li_m02.",".
-							"          ".$li_m03.",".$li_m04.",".$li_m05.",".$li_m06.",".$li_m07.",".$li_m08.",".$li_m09.",".$li_m10.",".
-							"		   ".$li_m11.",".$li_m12.",'".$ls_periodo."',".$li_valniv.",".$li_esttipcont.",'".$ls_formpre."',".
-							"		  '".$ls_formcont."','".$ls_formplan."','".$ls_formspi."','".$li_activo."','".$li_pasivo."',".
-							"		  '".$li_ingreso."','".$li_gasto."','".$li_resultado."','".$li_capital."','".$ls_ctares."',".
-							"         '".$ls_cueres."','".$ls_orden_d."','".$ls_orden_h."','".$ls_socgas."','".$ls_socser."',".
-							"		  '".$ls_nomger."','".$ls_jefcom."','".$ls_activo_h."','".$ls_pasivo_h."','".$ls_resultado_h."',".
-						 	"		  '".$ls_ingreso_f."','".$ls_gasto_f."','".$ls_ingreso_p."','".$ls_gasto_p."','".$ls_logo."',".
-							"		   ".$li_numniv.",'".$ls_nomestpro1."','".$ls_nomestpro2."','".$ls_nomestpro3."','".$ls_nomestpro4."',".
-							"		  '".$ls_nomestpro5."',".$ls_estvaltra.",'".$ls_rifemp."','".$ls_nitemp."','".$ls_estemp."',".
-							"		  '".$ls_ciuemp."','".$ls_zonpos."',".$ls_estmodape.",".$ls_estdesiva.",".$ls_estprecom.",".
-							"		   ".$ls_estmodsepsoc.",'".$ls_codorgsig."',".$ls_socbieser.",".$li_estmodest.",".$ld_salinipro.",".
-							"		   ".$ld_salinieje.",'".$ls_numordcom."','".$ls_numordser."','".$ls_numsolpag."','".$ls_nomorgads."',".
-							"		  '".$ls_numlicemp."','".$ls_modageret."','".$ls_nomres."','".$ls_concomiva."','".$ls_cedben."',".
-							"		  '".$ls_nomben."','".$ls_scctaben."',".$ls_estmodiva.",'".$ls_activot."','".$ls_pasivot."',".
-							"		  '".$ls_resultadot."','".$ls_ctafin."','".$ls_ctafis."','".$ls_diacadche."','".$ls_codasiona."',".
-							"		  '".$ls_loncodestpro1."','".$ls_loncodestpro2."','".$ls_loncodestpro3."','".$ls_loncodestpro4."',".
-							"		  '".$ls_loncodestpro5."','".$li_candeccon."',".$ls_tipconmon.",".$li_redconmon.",'".$ls_conrecdoc."')";
+		   {			
+		     $li_total_select = $this->io_sql_origen->num_rows($io_recordset);
+			 while($row=$this->io_sql_origen->fetch_row($io_recordset))
+			      {
+				    $ls_codemp = $row["codemp"];
+				    if (!empty($ls_codemp))
+				       {
+                         $ls_nombre = $this->io_validacion->uf_valida_texto($row["nombre"],0,100,"SIGESP");
+						 $ls_titulo = $this->io_validacion->uf_valida_texto($row["titulo"],0,100,"SIGESP");
+						 $ls_sigemp = $this->io_validacion->uf_valida_texto($row["sigemp"],0,50,"");
+						 $ls_diremp = $this->io_validacion->uf_valida_texto($row["direccion"],0,254,"");
+						 $ls_telemp = $this->io_validacion->uf_valida_texto($row["telemp"],0,20,"");
+						 $ls_faxemp = $this->io_validacion->uf_valida_texto($row["faxemp"],0,18,"");
+						 $ls_email  = $this->io_validacion->uf_valida_texto($row["email"],0,100,"");
+						 $ls_website = $this->io_validacion->uf_valida_texto($row["website"],0,100,"");
+						 $li_m01 = 0;
+						 $li_m02 = 0;
+						 $li_m03 = 0;
+						 $li_m04 = 0;
+						 $li_m05 = 0; 
+		                 $li_m06 = 0;
+						 $li_m07 = 0;
+						 $li_m08 = 0;
+						 $li_m09 = 0;
+						 $li_m10 = 0;
+						 $li_m11 = 0;
+						 $li_m12 = 0;
+						 $ls_periodo = '2008-01-01';
+						 $li_valniv = $this->io_validacion->uf_valida_monto($row["vali_nivel"],0);
+						 $li_esttipcont = $this->io_validacion->uf_valida_monto($row["esttipcont"],0);
+						 $ls_formpre = $this->io_validacion->uf_valida_texto(trim($row["formpre"]),0,30,"999-99-99-99");
+						 $ls_formcont = $this->io_validacion->uf_valida_texto(trim($row["formcont"]),0,30,"999-99-99-99");
+						 $ls_formplan = $this->io_validacion->uf_valida_texto(trim($row["formplan"]),0,30,"999-99-99-99");
+						 $ls_formspi = $this->io_validacion->uf_valida_texto(trim($row["formspi"]),0,30,"999-99-99-99");
+						 $li_activo = $this->io_validacion->uf_valida_texto(trim($row["activo"]),0,3,"0");
+						 $li_pasivo = $this->io_validacion->uf_valida_texto(trim($row["pasivo"]),0,3,"0");
+						 $li_ingreso = $this->io_validacion->uf_valida_texto(trim($row["ingreso"]),0,3,"0");
+						 $li_gasto = $this->io_validacion->uf_valida_texto(trim($row["gasto"]),0,3,"0");
+						 $li_resultado = $this->io_validacion->uf_valida_texto(trim($row["resultado"]),0,3,"0");
+						 $li_capital = $this->io_validacion->uf_valida_texto(trim($row["capital"]),0,3,"0");
+						 $ls_ctares = $this->io_validacion->uf_valida_texto(trim($row["c_resultad"]),0,25,"0");
+						 $ls_cueres = $this->io_validacion->uf_valida_texto(trim($row["c_resultan"]),0,25,"0");
+						 $ls_orden_d = $this->io_validacion->uf_valida_texto(trim($row["orden_d"]),0,3,"0");
+						 $ls_orden_h = $this->io_validacion->uf_valida_texto(trim($row["orden_h"]),0,3,"0");
+						 $ls_socgas = $this->io_validacion->uf_valida_texto(trim($row["soc_gastos"]),0,100,"0");
+						 $ls_socser = $this->io_validacion->uf_valida_texto(trim($row["soc_servic"]),0,100,"0");
+						 $ls_nomger = $this->io_validacion->uf_valida_texto(trim($row["gerente"]),0,50,"");
+						 $ls_jefcom = $this->io_validacion->uf_valida_texto(trim($row["jefe_compr"]),0,50,"");
+						 $ls_activo_h = $this->io_validacion->uf_valida_texto(trim($row["activo_h"]),0,3,"0");
+						 $ls_pasivo_h = $this->io_validacion->uf_valida_texto(trim($row["pasivo_h"]),0,3,"0");
+						 $ls_resultado_h  = $this->io_validacion->uf_valida_texto(trim($row["resultado_h"]),0,3,"0");
+						 $ls_ingreso_f = $this->io_validacion->uf_valida_texto(trim($row["ingreso_f"]),0,3,"0");
+						 $ls_gasto_f = $this->io_validacion->uf_valida_texto(trim($row["gasto_f"]),0,3,"0");
+						 $ls_ingreso_p = $this->io_validacion->uf_valida_texto(trim($row["ingreso_p"]),0,3,"0");
+						 $ls_gasto_p = $this->io_validacion->uf_valida_texto(trim($row["gasto_p"]),0,3,"0");
+						 $ls_logo = $this->io_validacion->uf_valida_texto(trim($row["logo"]),0,500,"logo.jpg");
+						 $li_numniv = $this->io_validacion->uf_valida_monto($row["numniv"],0);
+						 $ls_nomestpro1 = $this->io_validacion->uf_valida_texto($row["nomestpro1"],0,40,"-");
+						 $ls_nomestpro2 = $this->io_validacion->uf_valida_texto($row["nomestpro2"],0,40,"-");
+						 $ls_nomestpro3 = $this->io_validacion->uf_valida_texto($row["nomestpro3"],0,40,"-");
+						 $ls_nomestpro4 = $this->io_validacion->uf_valida_texto($row["nomestpro4"],0,40,"-");
+						 $ls_nomestpro5 = $this->io_validacion->uf_valida_texto($row["nomestpro5"],0,40,"-");
+						 $ls_estvaltra = $this->io_validacion->uf_valida_monto($row["estvaltra"],0);
+						 $ls_rifemp = $this->io_validacion->uf_valida_texto(trim($row["rifemp"]),0,15,"");
+						 $ls_nitemp = $this->io_validacion->uf_valida_texto(trim($row["nitemp"]),0,15,"");
+						 $ls_estemp = $this->io_validacion->uf_valida_texto($row["estemp"],0,50,"");
+						 $ls_ciuemp = $this->io_validacion->uf_valida_texto($row["ciuemp"],0,50,"");
+						 $ls_zonpos = $this->io_validacion->uf_valida_texto($row["zonpos"],0,5,"");
+						 $ls_estmodape = $this->io_validacion->uf_valida_monto($row["estmodape"],0);
+						 $ls_estdesiva = $this->io_validacion->uf_valida_monto($row["estdesiva"],0);
+						 $ls_estprecom = $this->io_validacion->uf_valida_monto($row["estprecom"],0);
+						 $ls_estmodsepsoc = $this->io_validacion->uf_valida_monto($row["estmodsepsoc"],0);
+						 $ls_codorgsig = $this->io_validacion->uf_valida_texto(trim($row["codorgsig"]),0,5,"");
+						 $ls_socbieser = $this->io_validacion->uf_valida_monto($row["socbieser"],0);
+						 $li_estmodest = $this->io_validacion->uf_valida_monto($row["estmodest"],0);
+						 $ld_saliniproaux = $this->io_validacion->uf_valida_monto($row["salinipro"],0);
+						 $ld_salinipro    =  $this->io_validacion->uf_valida_monto($row["salinipro"],0);
+	 	             	 $ld_saliniejeaux = $this->io_validacion->uf_valida_monto($row["salinieje"],0);
+						 $ld_salinieje = $this->io_validacion->uf_valida_monto($row["salinieje"],0);
+						 $ls_numordcom = '000000000000000';
+						 $ls_numordser = '000000000000000';
+						 $ls_numsolpag = '000000000000000';
+						 $ls_nomorgads = $this->io_validacion->uf_valida_texto($row["nomorgads"],0,254,"");
+						 $ls_numlicemp = $this->io_validacion->uf_valida_texto($row["numlicemp"],0,25,"");
+						 $ls_modageret = $this->io_validacion->uf_valida_texto($row["modageret"],0,1,"");
+						 $ls_nomres    = $this->io_validacion->uf_valida_texto($row["nomres"],0,20,"");
+						 $ls_concomiva = $this->io_validacion->uf_valida_texto($row["concomiva"],0,6,"");
+						 $ls_cedben    = $this->io_validacion->uf_valida_texto(trim($row["cedben"]),0,10,"");
+						 $ls_nomben    = $this->io_validacion->uf_valida_texto(trim($row["nomben"]),0,100,"");
+						 $ls_scctaben  = $this->io_validacion->uf_valida_texto(trim($row["scctaben"]),0,25,"");
+						 $ls_estmodiva =  $this->io_validacion->uf_valida_monto($row["estmodiva"],0);
+						 $ls_activot   = $this->io_validacion->uf_valida_texto(trim($row["activo_t"]),0,3,"0");
+						 $ls_pasivot   = $this->io_validacion->uf_valida_texto(trim($row["pasivo_t"]),0,3,"0");
+						 $ls_resultadot= $this->io_validacion->uf_valida_texto(trim($row["resultado_t"]),0,3,"0");
+						 $ls_ctafin    = $this->io_validacion->uf_valida_texto(trim($row["c_financiera"]),0,25,"0");
+						 $ls_ctafis    = $this->io_validacion->uf_valida_texto(trim($row["c_fiscal"]),0,25,"0");
+						 $ls_codasiona = $this->io_validacion->uf_valida_texto(trim($row["codasiona"]),0,10,"");
+						 $li_candeccon    = 2;
+						 $ls_tipconmon    = 0;
+						 $li_redconmon    = 1;
+
+					$ls_sql="INSERT INTO sigesp_empresa (codemp, nombre, titulo, sigemp, direccion, telemp, faxemp, email, website,
+					                                     m01, m02, m03, m04, m05,m06, m07, m08, m09, m10, m11, m12, periodo,
+														 vali_nivel, esttipcont, formpre, formcont, formplan,formspi, activo, pasivo,
+														 ingreso, gasto, resultado, capital, c_resultad, c_resultan, orden_d, orden_h, 
+						                                 soc_gastos, soc_servic, gerente, jefe_compr, activo_h, pasivo_h,
+														 resultado_h, ingreso_f, gasto_f,ingreso_p, gasto_p, logo, numniv,
+														 nomestpro1, nomestpro2, nomestpro3, nomestpro4, nomestpro5, estvaltra, 
+														 rifemp, nitemp, estemp, ciuemp, zonpos, estmodape, estdesiva, estprecom, estmodsepsoc, codorgsig, 
+														 socbieser, estmodest, salinipro, salinieje, numordcom, numordser, numsolpag, nomorgads, numlicemp, 
+														 modageret, nomres, concomiva, cedben, nomben, scctaben, estmodiva, activo_t, pasivo_t, resultado_t, 
+														 c_financiera, c_fiscal, codasiona, saliniproaux, saliniejeaux, candeccon, tipconmon, redconmon, diacadche) 
+											      VALUES ('".$ls_codemp."','".$ls_nombre."','".$ls_titulo."','".$ls_sigemp."','".$ls_diremp."','".$ls_telemp."','".$ls_faxemp."',
+						                                  '".$ls_email."','".$ls_website."',".$li_m01.",".$li_m02.",".$li_m03.",".$li_m04.",".$li_m05.",".$li_m06.",".$li_m07.",
+						                                  ".$li_m08.",".$li_m09.",".$li_m10.",".$li_m11.",".$li_m12.",'".$ls_periodo."',".$li_valniv.",".$li_esttipcont.",
+						                                  '".$ls_formpre."','".$ls_formcont."','".$ls_formplan."','".$ls_formspi."','".$li_activo."','".$li_pasivo."','".$li_ingreso."',
+														  '".$li_gasto."','".$li_resultado."','".$li_capital."','".$ls_ctares."','".$ls_cueres."','".$ls_orden_d."','".$ls_orden_h."',
+														  '".$ls_socgas."','".$ls_socser."','".$ls_nomger."','".$ls_jefcom."','".$ls_activo_h."','".$ls_pasivo_h."','".$ls_resultado_h."',
+						 								  '".$ls_ingreso_f."','".$ls_gasto_f."','".$ls_ingreso_p."','".$ls_gasto_p."','".$ls_logo."',".$li_numniv.",'".$ls_nomestpro1."',
+														  '".$ls_nomestpro2."','".$ls_nomestpro3."','".$ls_nomestpro4."','".$ls_nomestpro5."',".$ls_estvaltra.",'".$ls_rifemp."',
+						 								  '".$ls_nitemp."','".$ls_estemp."','".$ls_ciuemp."','".$ls_zonpos."',".$ls_estmodape.",".$ls_estdesiva.",".$ls_estprecom.",
+														  ".$ls_estmodsepsoc.",'".$ls_codorgsig."',".$ls_socbieser.",".$li_estmodest.",".$ld_salinipro.",".$ld_salinieje.",
+														  '".$ls_numordcom."','".$ls_numordser."','".$ls_numsolpag."','".$ls_nomorgads."','".$ls_numlicemp."','".$ls_modageret."',
+														  '".$ls_nomres."','".$ls_concomiva."','".$ls_cedben."','".$ls_nomben."','".$ls_scctaben."',".$ls_estmodiva.",'".$ls_activot."',
+														  '".$ls_pasivot."','".$ls_resultadot."','".$ls_ctafin."','".$ls_ctafis."','".$ls_codasiona."',".$ld_saliniproaux.",
+														  ".$ld_saliniejeaux.",'".$li_candeccon."',".$ls_tipconmon.",".$li_redconmon.",60)";
 					$li_row=$this->io_sql_destino->execute($ls_sql);
 					if ($li_row===false)
-					{
-						$lb_valido=false;
-						$ls_cadena="Error al Insertar la Empresa.\r\n".$this->io_sql_destino->message."\r\n";
-						$ls_cadena=$ls_cadena.$ls_sql."\r\n";
-						if ($this->lo_archivo)			
-						{
-							@fwrite($this->lo_archivo,$ls_cadena);
-						}
-					}
-					else
-					{ 
-						$li_total_insert++;
-					}
+					   {
+						 $lb_valido=false;
+						 $ls_cadena="Error al Insertar la Empresa.\r\n".$this->io_sql_destino->message."\r\n";
+						 $ls_cadena=$ls_cadena.$ls_sql."\r\n";
+						 if ($this->lo_archivo)			
+						    {
+							  @fwrite($this->lo_archivo,$ls_cadena);
+						    }
+					   }
+					 else
+					   { 
+					     $li_total_insert++;
+					   }
 				}
 				else
 				{
@@ -346,14 +337,14 @@ function uf_copiar_empresa()
 					}
 				}
 			}
-	    	$ls_cadena=		   "//*****************************************************************//\r\n";
-	    	$ls_cadena=$ls_cadena."   Tabla Origen  sigesp_empresa Registros ".$li_total_select." \r\n";
-	    	$ls_cadena=$ls_cadena."   Tabla Destino sigesp_empresa Registros ".$li_total_insert." \r\n";
-	    	$ls_cadena=$ls_cadena."//*****************************************************************//\r\n";
-	    	if ($this->lo_archivo)			
-		   	{
-		    	@fwrite($this->lo_archivo,$ls_cadena);
-		   	}
+	    $ls_cadena=		   "//*****************************************************************//\r\n";
+	    $ls_cadena=$ls_cadena."   Tabla Origen  sigesp_empresa Registros ".$li_total_select." \r\n";
+	    $ls_cadena=$ls_cadena."   Tabla Destino sigesp_empresa Registros ".$li_total_insert." \r\n";
+	    $ls_cadena=$ls_cadena."//*****************************************************************//\r\n";
+	    if ($this->lo_archivo)			
+		   {
+		     @fwrite($this->lo_archivo,$ls_cadena);
+		   }
 		}
 		return $lb_valido;
 	}// end function uf_copiar_empresa
@@ -597,7 +588,7 @@ function uf_copiar_usuarios()
 		$li_total_insert=0;
 		
 		$ls_sql = "SELECT codemp, codusu, cedusu, nomusu, apeusu, pwdusu, telusu, nota, actusu, blkusu, admusu, ultingusu, fotousu
-					 FROM sss_usuarios";
+					 FROM sss_usuarios where codusu like '%admin%'";
 		$io_recordset=$this->io_sql_origen->select($ls_sql);
 		if ($io_recordset===false)
 		   {  
@@ -925,7 +916,7 @@ function uf_copiar_permisos_internos()
 		$li_total_insert=0;
 		
 		$ls_sql = "SELECT codemp, codusu, codsis, codintper
-					 FROM sss_permisos_internos";
+					 FROM sss_permisos_internos where codusu like '%admin%'";
 		$io_recordset=$this->io_sql_origen->select($ls_sql);
 		if ($io_recordset===false)
 		   {  
@@ -1002,7 +993,7 @@ function uf_copiar_derechos_usuarios()
 		$li_total_insert=0;
 		
 		$ls_sql = "SELECT codemp, codusu, codsis, nomven, codintper, visible, enabled, leer, incluir, cambiar, eliminar, imprimir, administrativo, anular, ejecutar
-					 FROM sss_derechos_usuarios";
+					 FROM sss_derechos_usuarios where codusu like '%admin%'";
 		$io_recordset=$this->io_sql_origen->select($ls_sql);
 		if ($io_recordset===false)
 		   {  
@@ -1038,13 +1029,14 @@ function uf_copiar_derechos_usuarios()
 						 $li_ejecutar = $this->io_validacion->uf_valida_monto($row["ejecutar"],0);
 						 
 						 $ls_sql = "INSERT INTO sss_derechos_usuarios (codemp, codusu, codsis, nomven, codintper, visible, enabled, leer, incluir, cambiar, eliminar, imprimir, administrativo, anular, ejecutar) 
-						                 VALUES ('".$ls_codemp."','".$ls_codusu."','".$ls_codsis."','".$ls_nomven."','".$ls_codintper."',".$li_visible.",".$li_enabled.",".$li_leer.",".$li_incluir.",".$li_cambiar.",".$li_eliminar.",".$li_imprimir.",".$li_administrativo.",".$li_anular.",".$li_ejecutar.")";
+						                 VALUES ('".$ls_codemp."','".$ls_codusu."','".$ls_codsis."','".$ls_nomven."','".$ls_codintper."',".$li_visible.",".$li_enabled.",".$li_leer.",".$li_incluir.",".$li_cambiar.",".$li_eliminar.",".$li_imprimir.",".$li_administrativo.",".$li_anular.",".$li_ejecutar.");";
+										 print $ls_sql;
 					     $li_row = $this->io_sql_destino->execute($ls_sql);
 					     if ($li_row===false)
 					        {
 							  $lb_valido=false;
-							  $ls_cadena="Error al Insertar Derechos Usuarios.\r\n".$this->io_sql_destino->message."\r\n";
-							  $ls_cadena=$ls_cadena.$ls_sql."\r\n";
+							 // $ls_cadena="Error al Insertar Derechos Usuarios.\r\n".$this->io_sql_destino->message."\r\n";
+							  $ls_cadena=$ls_sql."\r\n";
 							  if ($this->lo_archivo)			
 								 { 
 								   @fwrite($this->lo_archivo,$ls_cadena);
@@ -1064,10 +1056,10 @@ function uf_copiar_derechos_usuarios()
 					        }
 				       }
 			      }
-			 $ls_cadena = "//*****************************************************************//\r\n";
-			 $ls_cadena = $ls_cadena."   Tabla Origen  sss_derechos_usuarios Registros ".$li_total_select." \r\n";
-			 $ls_cadena = $ls_cadena."   Tabla Destino sss_derechos_usuarios Registros ".$li_total_insert." \r\n";
-			 $ls_cadena = $ls_cadena."//*****************************************************************//\r\n";
+			// $ls_cadena = "//*****************************************************************//\r\n";
+			// $ls_cadena = $ls_cadena."   Tabla Origen  sss_derechos_usuarios Registros ".$li_total_select." \r\n";
+			 //$ls_cadena = $ls_cadena."   Tabla Destino sss_derechos_usuarios Registros ".$li_total_insert." \r\n";
+			// $ls_cadena = $ls_cadena."//*****************************************************************//\r\n";
 			 if ($this->lo_archivo)			
 			    {
 				  @fwrite($this->lo_archivo,$ls_cadena);
@@ -1091,7 +1083,7 @@ function uf_copiar_usuarios_grupos()
 		$li_total_insert=0;
 		
 		$ls_sql = "SELECT codemp, nomgru, codusu
-					 FROM sss_usuarios_en_grupos";
+					 FROM sss_usuarios_en_grupos where codusu like '%admin%'";
 		$io_recordset=$this->io_sql_origen->select($ls_sql);
 		if ($io_recordset===false)
 		   {  
@@ -1191,7 +1183,7 @@ function uf_copiar_monedas()
 						 $ls_imamon    = $this->io_validacion->uf_valida_texto($row["imamon"],0,6,"-");
 						 $ls_codpai    = $this->io_validacion->uf_valida_texto($row["codpai"],0,3,"-");
 						 $ld_tascamaux = $this->io_validacion->uf_valida_monto($row["tascam"],0);
-						 $ld_tascam    = $this->io_rcbsf->uf_convertir_monedabsf($ld_tascamaux,4,1,1000,1);
+						 $ld_tascam    =  $this->io_validacion->uf_valida_monto($row["tascam"],0);
 						 $ld_estmonpri = $this->io_validacion->uf_valida_monto($row["estmonpri"],0);
 						 
 					     
