@@ -13,6 +13,7 @@ web/uploads/*
 sigesp_config.php
 sno/txt/*
 apr/config_apertura.php
+apr/resultado/*
 # -- Composer -----------------------------------------
 composer.phar
 
