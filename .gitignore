@@ -1,4 +1,4 @@
-# -- Symfony2 -----------------------------------------
+# -- Symfony2 / Sigesp -----------------------------------------
 app/bootstrap.php.cache
 app/bootstrap_cache.php.cache
 app/config/parameters.ini
@@ -12,6 +12,7 @@ web/js/*
 web/uploads/*
 sigesp_config.php
 sno/txt/*
+apr/config_apertura.php
 # -- Composer -----------------------------------------
 composer.phar
 
