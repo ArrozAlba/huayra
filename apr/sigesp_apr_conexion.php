@@ -17,6 +17,23 @@ else
 {
   $ls_dbdestino="";
 }		
+$li_diasem = date('w');
+switch ($li_diasem){
+  case '0': $ls_diasem='Domingo';
+  break; 
+  case '1': $ls_diasem='Lunes';
+  break;
+  case '2': $ls_diasem='Martes';
+  break;
+  case '3': $ls_diasem='Mi&eacute;rcoles';
+  break;
+  case '4': $ls_diasem='Jueves';
+  break;
+  case '5': $ls_diasem='Viernes';
+  break;
+  case '6': $ls_diasem='S&aacute;bado';
+  break;
+}	
 
 $_SESSION["ls_data_des"] = $ls_dbdestino;
 ?>
@@ -49,6 +66,16 @@ a:active {
   <tr>
     <td width="570" height="30" class="cd-logo"><img src="../shared/imagebank/header.jpg" width="570" height="40"></td>
   </tr>
+  
+  <tr>
+    <td width="332" height="20" colspan="11" bgcolor="#E7E7E7">
+		<table width="762" border="0" align="center" cellpadding="0" cellspacing="0">
+          <td width="432" height="20"  class="descripcion_sistema">Apertura de Sigesp </td>
+			<td width="346" bgcolor="#E7E7E7"><div align="right"><span class="letras-peque�as"><b><?PHP print $ls_diasem." ".date("d/m/Y")." - ".date("h:i a e");?></b></span></div></td>
+	  	</table>
+    </td>
+  </tr>
+  
   <tr>
     <td height="13" bgcolor="#FFFFFF" class="toolbar"></td>
   </tr>
@@ -58,6 +85,38 @@ a:active {
 </table>
 <p>
   <?php
+	function uf_conectar_destino() 
+	{
+		global $msg;	
+
+		if (strtoupper($_SESSION["ls_gestor_destino"])==strtoupper("mysql"))
+		{
+		    $conec = @mysql_connect($_SESSION["ls_hostname_destino"],$_SESSION["ls_login_destino"],$_SESSION["ls_password_destino"]);						
+			if($conec===false)
+			{
+				$msg->message("No pudo conectar con el servidor de datos MYSQL,".$_SESSION["ls_hostname_destino"]." , contacte al administrador del sistema");	
+			}
+			else
+			{			    
+				$lb_ok=@mysql_select_db(trim($_SESSION["ls_database_destino"]),$conec);
+				if (!$lb_ok)
+				{
+					$msg->message("No existe la base de datos ".$_SESSION["ls_database_destino"]);					
+				}
+			}
+		return $conec;
+		}		
+		if(strtoupper($_SESSION["ls_gestor_destino"])==strtoupper("postgre"))
+		{
+			$conec = @pg_connect("host=".$_SESSION["ls_hostname_destino"]." port=".$_SESSION["ls_port_destino"]."  dbname=".$_SESSION["ls_database_destino"]." user=".$_SESSION["ls_login_destino"]." password=".$_SESSION["ls_password_destino"]); 
+		
+			if (!$conec)
+			{
+				$msg->message("No pudo conectar al servidor de base de datos POSTGRES, contacte al administrador del sistema");				
+			}
+      	 return $conec;
+	    }		
+	}		
 	if(array_key_exists("operacion",$_POST))
 	{
 		$ls_operacion=$_POST["operacion"];
@@ -82,6 +141,25 @@ a:active {
 			print "<script language=JavaScript>";
 			print "location.href='sigespwindow_blank.php'" ;
 			print "</script>";
+		}
+		elseif($ls_operacion="SELEMPRESA")
+		{			
+			$ls_codemp=$_POST["cmbempresa"];
+			$con_destino=uf_conectar();
+			$obj_sql=new class_sql($con_destino);
+			$ls_sql="SELECT * FROM sigesp_empresa where codemp='".$ls_codemp."' ";
+			$result=$obj_sql->select($ls_sql);
+			$li_row=$obj_sql->num_rows($result);
+			$li_pos=0;
+			if($row=$obj_sql->fetch_row($result))
+			{
+				$la_empresa=$row;   
+				$_SESSION["la_empresa"]=$la_empresa;
+				$a=$_SESSION["la_empresa"];
+				print "<script language=JavaScript>";
+				print "location.href='sigesp_inicio_sesion.php'" ;
+				print "</script>";
+			}
 		}
 	}
 	else

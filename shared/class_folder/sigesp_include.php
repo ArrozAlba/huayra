@@ -11,12 +11,29 @@ class sigesp_include
 	}
 
 	function uf_conectar () 
-	{
+	{	
 
 		$conec=&ADONewConnection($_SESSION["ls_gestor"]);
 		//$conec->PConnect($_SESSION["ls_hostname"],$_SESSION["ls_login"],$_SESSION["ls_password"],$_SESSION["ls_database"]); 
 		$servidor=$_SESSION["ls_hostname"].':'.$_SESSION["ls_port"];
 		$conec->Connect($servidor,$_SESSION["ls_login"],$_SESSION["ls_password"],$_SESSION["ls_database"]); 
+
+		//$conec->debug = true;
+		$conec->SetFetchMode(ADODB_FETCH_ASSOC);
+		if($conec===false)
+		{
+			$this->msg->message("No pudo conectar al servidor de base de datos, contacte al administrador del sistema");				
+			exit();
+		}
+		return $conec;
+	}
+
+	function uf_conectar_destino($basedato)
+	{	
+		$conec=&ADONewConnection($_SESSION["ls_gestor"]);
+		//$conec->PConnect($_SESSION["ls_hostname"],$_SESSION["ls_login"],$_SESSION["ls_password"],$_SESSION["ls_database"]); 
+		$servidor=$_SESSION["ls_hostname"].':'.$_SESSION["ls_port"];
+		$conec->Connect($servidor,$_SESSION["ls_login"],$_SESSION["ls_password"],$basedato); 
 
 		//$conec->debug = true;
 		$conec->SetFetchMode(ADODB_FETCH_ASSOC);

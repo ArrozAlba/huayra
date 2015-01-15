@@ -171,6 +171,9 @@ function uf_insert_movimiento($ls_codemp,$ls_codusu,$ls_codban,$ls_ctaban,$ls_nu
 	     $as_codtipfon = '----';
 	   }
 	 //MOdificado el 19 De febrero de 2014... estes el insert into del sigesp... el que traia huayra reposa en mi pc en la carpeta huayra
+	   /*14 ENE 2014 --- 15:49--- duplicada variable ldec_monto en reemplazo de variable ldec_monobjret 
+	   ldec_monret se sustituyo por 0 USA ESTE
+	   proceso pendiente de revisar*/
 	$ls_sql="INSERT INTO scb_movbco(       codemp   ,     codusu   ,       codban   ,       ctaban   ,       numdoc   ,
 									       codope   ,     fecmov   ,       conmov   ,       codconmov   ,      cod_pro   , 
 										   ced_bene ,     nomproben,        monto   ,        monobjret  ,        monret  ,
@@ -178,7 +181,7 @@ function uf_insert_movimiento($ls_codemp,$ls_codusu,$ls_codban,$ls_ctaban,$ls_nu
 										   estcon   ,     feccon   ,   estreglib       ,tipo_destino,fecha,procede, codfuefin)
 			 VALUES                ('".$ls_codemp."','".$ls_codusu."','".$ls_codban."','".$ls_ctaban."','".$ls_numdoc."',
 			 						'".$ls_codope."','".$ldt_fecha."','".$ls_conmov."','".$ls_codconmov."','".$ls_codpro."',
-									'".$ls_cedbene."','".$ls_nomproben."',".$ldec_monto.",".$ldec_monobjret.",".$ldec_monret.",
+									'".$ls_cedbene."','".$ls_nomproben."',".$ldec_monto.",".$ldec_monto.",0,
 									'".$ls_chevau."','".$ls_estmov."',".$li_estmovint.",".$li_cobrapaga.", 0    ,'".$ls_estbpd."',
 									    0  ,'1900-01-01','".$ls_estreglib."','".$ls_tipproben."','1900-01-01','SCBBCH','--')";										
 	
@@ -1920,6 +1923,9 @@ function uf_update_montos_auxiliares_movbco_spg($as_codemp,$as_codban,$as_ctaban
 	   {
 	     $ls_chevau= str_pad($ls_chevau,25,"0",STR_PAD_LEFT);
 	   }
+	    /*14 ENE 2014 --- 15:50--- duplicada variable ldec_monto en reemplazo de variable ldec_monobjret 
+	   ldec_monret se sustituyo por 0
+	   proceso pendiente de revisar*/
 	$ls_sql="INSERT INTO scb_movbco(       codemp   ,     codusu   ,       codban   ,       ctaban   ,       numdoc   ,
 									       codope   ,     fecmov   ,       conmov   ,       codconmov   ,      cod_pro   , 
 										   ced_bene ,     nomproben,        monto   ,        monobjret  ,        monret  ,
@@ -1927,7 +1933,7 @@ function uf_update_montos_auxiliares_movbco_spg($as_codemp,$as_codban,$as_ctaban
 										   estcon   ,     feccon   ,   estreglib       ,tipo_destino,fecha,procede, codfuefin, estant, docant, monamo, estmovcob)
 			 VALUES                ('".$ls_codemp."','".$ls_codusu."','".$ls_codban."','".$ls_ctaban."','".$ls_numdoc."',
 			 						'".$ls_codope."','".$ldt_fecha."','".$ls_conmov."','".$ls_codconmov."','".$ls_codpro."',
-									'".$ls_cedbene."','".$ls_nomproben."',".$ldec_monto.",".$ldec_monobjret.",".$ldec_monret.",
+									'".$ls_cedbene."','".$ls_nomproben."',".$ldec_monto.",".$ldec_monto.",0,
 									'".$ls_chevau."','".$ls_estmov."',".$li_estmovint.",".$li_cobrapaga.", 0    ,'".$ls_estbpd."',
 									    0  ,'1900-01-01','".$ls_estreglib."','".$ls_tipproben."','1900-01-01','SCBBCH','--','".$ls_anticipo."','".$as_docant."',".$as_monamo.",".$li_estmovcob.")"; 									
 	$li_result=$this->io_sql->execute($ls_sql);

@@ -457,7 +457,7 @@ if (($li_estciespg==1 || $li_estciespi==1) && $ls_operacion=="NUEVO")
 		}
 		$ls_chevau = str_pad($ls_chevau,25,0,0);
 		$in_classmovbco->io_sql->begin_transaction();
-		$lb_valido=$in_classmovbco->uf_guardar_automatico($ls_codban,$ls_cuenta_banco,$ls_docmov,$ls_mov_operacion,$ld_fecha,$ls_desmov,$ls_codconmov,$ls_codpro,$ls_cedbene,$ls_desproben,$ldec_montomov,$ldec_monobjret, $ldec_montoret,$ls_chevau,$ls_estmov,$li_estint,"$ls_opepre",$ls_estbpd,'SCBMOV',' ',$ls_estdoc,$ls_tipo,$ls_codfuefin,$ls_numordpagmin,$ls_codtipfon,0);
+		$lb_valido=$in_classmovbco->uf_guardar_automatico($ls_codban,$ls_cuenta_banco,$ls_docmov,$ls_mov_operacion,$ld_fecha,$ls_desmov,$ls_codconmov,$ls_codpro,$ls_cedbene,$ls_desproben,$ldec_montomov::double,$ldec_monobjret::double, $ldec_montoret::double,$ls_chevau,$ls_estmov,$li_estint,"$ls_opepre",$ls_estbpd,'SCBMOV',' ',$ls_estdoc,$ls_tipo,$ls_codfuefin,$ls_numordpagmin,$ls_codtipfon,0);
 		if($lb_valido)
 		{
 		     $lb_valido=$in_classmovbco->uf_actualizar_estatus_ch($ls_codban,$ls_cuenta_banco,$ls_docmov,$ls_numchequera,1);
@@ -866,13 +866,13 @@ Beneficiario</label>
       <td height="22" colspan="2" style="text-align:right">Monto</td>
       <td width="183"><span style="text-align:left">
         <input name="txtmonto" type="text" id="txtmonto" style="text-align:right" onBlur="javascript:uf_format(this);uf_montoobjret(this);uf_verificar_monto(this);" onKeyPress="return(currencyFormat(this,'.',',',event));" value="<?php print number_format($ldec_montomov,2,",",".");?>" size="24">
-      </span></td>
+      </span><?php var_dump($ldec_montomov);?></td>
       <td width="50" style="text-align:right">M.O.R</td>
-      <td colspan="2"><input name="txtmonobjret" type="text" id="txtmonobjret" style="text-align:right" onBlur="javascript:validar_monto();javascript:uf_format(this);" onKeyPress="return(currencyFormat(this,'.',',',event));" value="<?php print  number_format($ldec_monobjret,2,",",".");?>" size="22"></td>
+      <td colspan="2"><input name="txtmonobjret" type="text" id="txtmonobjret" style="text-align:right" onBlur="javascript:validar_monto();javascript:uf_format(this);" onKeyPress="return(currencyFormat(this,'.',',',event));" value="<?php print  number_format($ldec_monobjret,2,",",".");?>" size="22"><?php var_dump($ldec_monobjret);?></td>
       <td style="text-align:right">Monto Retenido</td>
       <td><span style="text-align:left">
-        <input name="txtretenido" type="text" id="txtretenido2" style="text-align:right" value="<?php print number_format($ldec_montoret,2,",",".");?>" size="24" readonly>
-      </span></td>
+        <input name="txtretenido" type="text" id="txtretenido2" style="text-align:right" value="<?php print number_format($ldec_montoret,2,",","."); ?>" size="24" readonly>
+      </span><?php var_dump($ldec_montoret);?></td>
     </tr>
     <tr>
       <td height="22" colspan="2"><div align="right">Fte. Financiamiento</div></td>
