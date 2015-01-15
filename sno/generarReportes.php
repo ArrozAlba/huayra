@@ -277,18 +277,18 @@ if ($ape!=""){
         $lobjPdf->setY(150);
         $lobjPdf->setX(20);
         $lobjPdf->SetFont("Arial","",12);
-        $lobjPdf->MultiCell(175,7,utf8_decode("        Aunado a esto percibe por beneficio de Ticket de Alimentación la cantidad de Mil Novecientos Cinco Bolívares con 00/100 céntimos (Bs. 1.905,00)"));  
+        $lobjPdf->MultiCell(175,7,utf8_decode("        Aunado a esto percibe por beneficio de Ticket de Alimentación la cantidad de Dos mil ochocientos cincuenta y siete con 80/100 céntimos ( Bs. 2857,80)"));  
         $lobjPdf->Cell(0,2,utf8_decode(""),0,1,"C");
         $lobjPdf->Ln();
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano));  
+        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
     }
     else{
         $lobjPdf->SetFont("Arial","",12);
         $lobjPdf->Ln();$lobjPdf->Ln();$lobjPdf->Ln();
         $lobjPdf->setY(160);
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano));  
+        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
     }
     //ultima parte
     $lobjPdf->Ln();
@@ -426,18 +426,18 @@ if ($ape!=""){
         $lobjPdf->setY(163);
         $lobjPdf->setX(20);
         $lobjPdf->SetFont("Arial","",12);
-        $lobjPdf->MultiCell(175,7,utf8_decode("        Aunado a esto percibe por beneficio de Ticket de Alimentación la cantidad de Mil Novecientos Cinco Bolívares con 00/100 céntimos (Bs. 1.905,00)"));  
+        $lobjPdf->MultiCell(175,7,utf8_decode("        Aunado a esto percibe por beneficio de Ticket de Alimentación la cantidad de Dos mil ochocientos cincuenta y siete con 80/100 céntimos ( Bs. 2857,80)"));  
         $lobjPdf->Cell(0,2,utf8_decode(""),0,1,"C");
         $lobjPdf->Ln();
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano));  
+        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
     }
     else{
         $lobjPdf->SetFont("Arial","",12);
         $lobjPdf->Ln();$lobjPdf->Ln();$lobjPdf->Ln();
         $lobjPdf->setY(172);
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano));  
+        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
     }
     //ultima parte
     $lobjPdf->Ln();
