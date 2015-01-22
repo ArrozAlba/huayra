@@ -281,14 +281,14 @@ if ($ape!=""){
         $lobjPdf->Cell(0,2,utf8_decode(""),0,1,"C");
         $lobjPdf->Ln();
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
+        $lobjPdf->MultiCell(175,7,utf8_decode(" Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano)); 
     }
     else{
         $lobjPdf->SetFont("Arial","",12);
         $lobjPdf->Ln();$lobjPdf->Ln();$lobjPdf->Ln();
         $lobjPdf->setY(160);
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
+        $lobjPdf->MultiCell(175,7,utf8_decode(" Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano));   
     }
     //ultima parte
     $lobjPdf->Ln();
@@ -430,14 +430,14 @@ if ($ape!=""){
         $lobjPdf->Cell(0,2,utf8_decode(""),0,1,"C");
         $lobjPdf->Ln();
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
+        $lobjPdf->MultiCell(175,7,utf8_decode(" Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano));   
     }
     else{
         $lobjPdf->SetFont("Arial","",12);
         $lobjPdf->Ln();$lobjPdf->Ln();$lobjPdf->Ln();
         $lobjPdf->setY(172);
         $lobjPdf->setX(20);
-        $lobjPdf->MultiCell(175,7,utf8_decode("         Constancia que se expide en Píritu, a petición de la parte interesada a los los 16 días de mes de Enero del año 2015"));  
+        $lobjPdf->MultiCell(175,7,utf8_decode(" Constancia que se expide en Píritu, a petición de la parte interesada a los ".$ls_dia." días de mes de ".$ls_mes." del año ".$ls_ano));  
     }
     //ultima parte
     $lobjPdf->Ln();
