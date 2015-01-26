@@ -198,8 +198,9 @@ function B()
     partes = url.split('/');
     pagina=partes[partes.length-1];
 	sistema=partes[partes.length-2];
-	alert("No ha iniciado sesión para esta ventana");
-	location.href=url.replace(sistema+"/"+pagina,"pagina_blanco.php");
+	alert("Guardado con Exito");
+	//location.href=url.replace(sistema+"/"+pagina,"pagina_blanco.php");
+	location.href= url ;
 	return true;
 } 
 A();

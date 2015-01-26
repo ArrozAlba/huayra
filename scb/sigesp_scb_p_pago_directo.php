@@ -457,7 +457,7 @@ if (($li_estciespg==1 || $li_estciespi==1) && $ls_operacion=="NUEVO")
 		}
 		$ls_chevau = str_pad($ls_chevau,25,0,0);
 		$in_classmovbco->io_sql->begin_transaction();
-		$lb_valido=$in_classmovbco->uf_guardar_automatico($ls_codban,$ls_cuenta_banco,$ls_docmov,$ls_mov_operacion,$ld_fecha,$ls_desmov,$ls_codconmov,$ls_codpro,$ls_cedbene,$ls_desproben,$ldec_montomov::double,$ldec_monobjret::double, $ldec_montoret::double,$ls_chevau,$ls_estmov,$li_estint,"$ls_opepre",$ls_estbpd,'SCBMOV',' ',$ls_estdoc,$ls_tipo,$ls_codfuefin,$ls_numordpagmin,$ls_codtipfon,0);
+		$lb_valido=$in_classmovbco->uf_guardar_automatico($ls_codban,$ls_cuenta_banco,$ls_docmov,$ls_mov_operacion,$ld_fecha,$ls_desmov,$ls_codconmov,$ls_codpro,$ls_cedbene,$ls_desproben,$ldec_montomov,$ldec_monobjret, $ldec_montoret,$ls_chevau,$ls_estmov,$li_estint,"$ls_opepre",$ls_estbpd,'SCBMOV',' ',$ls_estdoc,$ls_tipo,$ls_codfuefin,$ls_numordpagmin,$ls_codtipfon,0);
 		if($lb_valido)
 		{
 		     $lb_valido=$in_classmovbco->uf_actualizar_estatus_ch($ls_codban,$ls_cuenta_banco,$ls_docmov,$ls_numchequera,1);

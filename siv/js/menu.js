@@ -1,3 +1,4 @@
+// Menus del sistema
 // stm_aix("p1i2","p1i0",[0,"Opción 2    ","","",-1,-1,0,""]);
 // stm_aix("p1i0","p0i0",[0,"Opción 1    ","","",-1,-1,0,"tablas.htm","_self","","","","",6,0,0,"","",0,0,0,0,1,"#ffffff"]);
 
@@ -198,13 +199,15 @@ function A()
 }
 function B()
 {
-	var url = document.location.href;
-    partes = url.split('/');
-    pagina=partes[partes.length-1];
-	sistema=partes[partes.length-2];
-	alert("No ha iniciado sesión para esta ventana");
-	location.href=url.replace(sistema+"/"+pagina,"pagina_blanco.php");
-	return true;
+//	var url = document.location.href;
+//    partes = url.split('/');/
+//    pagina=partes[partes.length-1];
+//	sistema=partes[partes.length-2];
+	//alert("No ha iniciado sesión para esta ventana");
+	//location.href=url.replace(sistema+"/"+pagina,"pagina_blanco.php");
+//	location.href=url;
+//	
+//	return true;
 } 
 A();
 B();
