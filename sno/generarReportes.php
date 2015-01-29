@@ -238,7 +238,7 @@ if ($ape!=""){
 	        $lobjPdf->newFlowingBlock(180, 8, 'J');
 	        $lobjPdf->Ln();
 	        $lobjPdf->SetFont('Arial', '', 12);
-	        $lobjPdf->WriteFlowingBlock("       Quien suscribe,");
+	        $lobjPdf->WriteFlowingBlock("       Quien suscribe, ");
 	        $lobjPdf->SetFont('Arial', 'B', 12);
 	        $lobjPdf->WriteFlowingBlock(utf8_decode("Ing. Tirado Santaella Antonio José,"));
 	        $lobjPdf->SetFont('Arial', '', 12);
@@ -304,7 +304,7 @@ if ($ape!=""){
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Gerente General"),0,1,"C");
     $lobjPdf->setX(20);
-    $lobjPdf->Cell(175,7,utf8_decode("Segun Punto de Cuenta Nro 008–2014 de Fecha 10/02/2014"),0,1,"C");
+    $lobjPdf->Cell(175,7,utf8_decode("Segun Punto de Cuenta Nro 008-2014 de Fecha 10/02/2014"),0,1,"C");
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Empresa Mixta Socialista Arroz del Alba, S.A."),0,1,"C");
     $lobjPdf->Output();
@@ -382,7 +382,7 @@ if ($ape!=""){
 	        //encabezado 
 	        $lobjPdf->newFlowingBlock(180, 7, 'J');
 	        $lobjPdf->SetFont('Arial', '', 12);
-	        $lobjPdf->WriteFlowingBlock("       Quien suscribe,");
+	        $lobjPdf->WriteFlowingBlock("       Quien suscribe, ");
 	        $lobjPdf->SetFont('Arial', 'B', 12);
 	        $lobjPdf->WriteFlowingBlock(utf8_decode("Ing. Tirado Santaella Antonio José,"));
 	        $lobjPdf->SetFont('Arial', '', 12);
@@ -453,7 +453,7 @@ if ($ape!=""){
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Gerente General"),0,1,"C");
     $lobjPdf->setX(20);
-    $lobjPdf->Cell(175,7,utf8_decode("Segun Punto de Cuenta Nro 008–2014 de Fecha 10/02/2014"),0,1,"C");
+    $lobjPdf->Cell(175,7,utf8_decode("Segun Punto de Cuenta Nro 008-2014 de Fecha 10/02/2014"),0,1,"C");
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Empresa Mixta Socialista Arroz del Alba, S.A."),0,1,"C");
     $lobjPdf->Output();
