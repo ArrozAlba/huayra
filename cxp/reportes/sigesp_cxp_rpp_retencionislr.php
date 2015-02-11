@@ -84,7 +84,7 @@
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$la_data[1]=array('name'=>'<b><i>Agente de Retención:</i></b>'."  ".$as_agente);
 		$la_data[2]=array('name'=>'<b><i>RIF Agente de Retención:</i></b> G-20008205-4'."  ");
-		$la_data[3]=array('name'=>'<b><i>DirecciÃ³n Agente de Retención:</i></b> CTRA PRINCIPAL VIA TUREN LOCAL ANTIGUA SEDE CARGILL DE VENEZUELA SECTOR PIRITU EDO PORTUGUESA'."  ");
+		$la_data[3]=array('name'=>'<b><i>Dirección agente de Retención:</i></b> CTRA PRINCIPAL VIA TUREN LOCAL ANTIGUA SEDE CARGILL DE VENEZUELA SECTOR PIRITU EDO PORTUGUESA'."  ");
 		$la_data[4]=array('name'=>'<b><i>Nombre o Razón Social:</i></b>'."  ".$as_nombre);
 		$la_data[5]=array('name'=>'<b><i>RIF:</i></b>'."  ".$as_rif."                                                        <b><i>NIT:</i></b>  ".$as_nit);
 		$la_data[6]=array('name'=>'<b><i>Direccion:</i></b>'."  ".$as_direccion);
