@@ -69,22 +69,26 @@
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//       Function: uf_print_encabezado
 		//		   Access: private 
-		//	    Arguments: as_agente // Nombre del agente de retención
-		//	    		   as_nombre // Nombre del proveedor ó beneficiario
-		//	    		   as_rif // Rif del proveedor ó beneficiario
-		//	    		   as_nit // nit del proveedor ó beneficiario
-		//	    		   as_telefono // Telefono del proveedor ó beneficiario
-		//	    		   as_direccion // Dirección del proveedor ó beneficiario
+		//	    Arguments:     1as_agente // Nombre del agente de retención
+		//			   2as_rifagenteret
+		//			   3as_diragenteret
+		//	    		   4as_nombre // Nombre del proveedor ó beneficiario
+		//	    		   5as_rif // Rif del proveedor ó beneficiario
+		//	    		   6as_nit // nit del proveedor ó beneficiario
+		//	    		   7as_telefono // Telefono del proveedor ó beneficiario
+		//	    		   8as_direccion // Dirección del proveedor ó beneficiario
 		//	    		   io_pdf // Instancia de objeto pdf
 		//    Description: función que imprime el detalle por recepción
 		//	   Creado Por: Ing. Yesenia Moreno / Ing. Luis Lang
 		// Fecha Creación: 05/07/2007 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$la_data[1]=array('name'=>'<b><i>Agente de Retención:</i></b>'."  ".$as_agente);
-		$la_data[2]=array('name'=>'<b><i>Nombre o Razón Social:</i></b>'."  ".$as_nombre);
-		$la_data[3]=array('name'=>'<b><i>RIF:</i></b>'."  ".$as_rif."                                                        <b><i>NIT:</i></b>  ".$as_nit);
-		$la_data[4]=array('name'=>'<b><i>Direccion:</i></b>'."  ".$as_direccion);
-		$la_data[5]=array('name'=>'<b><i>Telefono:</i></b>'.$as_telefono);
+		$la_data[2]=array('name'=>'<b><i>RIF Agente de Retención:</i></b> G-20008205-4'."  ");
+		$la_data[3]=array('name'=>'<b><i>DirecciÃ³n Agente de Retención:</i></b> CTRA PRINCIPAL VIA TUREN LOCAL ANTIGUA SEDE CARGILL DE VENEZUELA SECTOR PIRITU EDO PORTUGUESA'."  ");
+		$la_data[4]=array('name'=>'<b><i>Nombre o Razón Social:</i></b>'."  ".$as_nombre);
+		$la_data[5]=array('name'=>'<b><i>RIF:</i></b>'."  ".$as_rif."                                                        <b><i>NIT:</i></b>  ".$as_nit);
+		$la_data[6]=array('name'=>'<b><i>Direccion:</i></b>'."  ".$as_direccion);
+		$la_data[7]=array('name'=>'<b><i>Telefono:</i></b>'.$as_telefono);
 		$la_columna=array('name'=>'');
 		$la_config=array('showHeadings'=>0, // Mostrar encabezados
 						 'showLines'=>0, // Mostrar Líneas
