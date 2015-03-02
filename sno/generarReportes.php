@@ -191,7 +191,7 @@ if ($ape!=""){
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(utf8_decode(" titular de la cédula de identidad Nro V-24.320.049, en mi carácter de "));
 	        $lobjPdf->SetFont('Arial', 'B', 12);
-	        $lobjPdf->WriteFlowingBlock("Gerente de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
+	        $lobjPdf->WriteFlowingBlock("Gerente (E) de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(" hace constar que el (la) ciudadano (a): ");
 	        $lobjPdf->SetFont('Arial', 'B', 12);
@@ -244,7 +244,7 @@ if ($ape!=""){
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(utf8_decode(" titular de la cédula de identidad Nro V-24.320.049, en mi carácter de "));
 	        $lobjPdf->SetFont('Arial', 'B', 12);
-	        $lobjPdf->WriteFlowingBlock("Gerente de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
+	        $lobjPdf->WriteFlowingBlock("Gerente (E) de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(" hace constar que el (la) ciudadano (a): ");
 	        $lobjPdf->SetFont('Arial', 'B', 12);
@@ -302,7 +302,7 @@ if ($ape!=""){
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Lcda. Loreto Inostroza "),0,1,"C");
     $lobjPdf->setX(20);
-    $lobjPdf->Cell(175,7,utf8_decode("Gerente de Recursos Humanos"),0,1,"C");
+    $lobjPdf->Cell(175,7,utf8_decode("Gerente (E) de Recursos Humanos"),0,1,"C");
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Segun Punto de Cuenta Nro 020-2014 de Fecha 14/02/2014"),0,1,"C");
     $lobjPdf->setX(20);
@@ -338,7 +338,7 @@ if ($ape!=""){
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(utf8_decode(" titular de la cédula de identidad Nro V-24.320.049, en mi carácter de "));
 	        $lobjPdf->SetFont('Arial', 'B', 12);
-	        $lobjPdf->WriteFlowingBlock("Gerente de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
+	        $lobjPdf->WriteFlowingBlock("Gerente (E) de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(" hace constar que el (la) ciudadano (a): ");
 	        $lobjPdf->SetFont('Arial', 'B', 12);
@@ -388,7 +388,7 @@ if ($ape!=""){
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(utf8_decode(" titular de la cédula de identidad Nro V-24.320.049, en mi carácter de "));
 	        $lobjPdf->SetFont('Arial', 'B', 12);
-	        $lobjPdf->WriteFlowingBlock("Gerente de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
+	        $lobjPdf->WriteFlowingBlock("Gerente (E) de Recursos Humanos de la Empresa Mixta Socialista Arroz del ALBA S.A,");
 	        $lobjPdf->SetFont('Arial', '', 12);
 	        $lobjPdf->WriteFlowingBlock(" hace constar que el (la) ciudadano (a): ");
 	        $lobjPdf->SetFont('Arial', 'B', 12);
@@ -451,7 +451,7 @@ if ($ape!=""){
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Lcda. Loreto Inostroza "),0,1,"C");
     $lobjPdf->setX(20);
-    $lobjPdf->Cell(175,7,utf8_decode("Gerente de Recursos Humanos"),0,1,"C");
+    $lobjPdf->Cell(175,7,utf8_decode("Gerente (E) de Recursos Humanos"),0,1,"C");
     $lobjPdf->setX(20);
     $lobjPdf->Cell(175,7,utf8_decode("Segun Punto de Cuenta Nro 020-2014 de Fecha 14/02/2014"),0,1,"C");
     $lobjPdf->setX(20);
