@@ -168,7 +168,7 @@ if (($ls_operacion=="CAMBIO_TIPO")||($ls_operacion=="GUARDAR"))
 	 //Cargo los datos de las programaciones.
 	 $rs_solpag = $io_despag->uf_cargar_programaciones($_SESSION["la_empresa"]["codemp"],$ls_tipproben);		
      $li_totsolpag = $io_despag->SQL->num_rows($rs_solpag);
-	 if ($li_totsolpag>0)
+     if ($li_totsolpag>0)
 	    {
 		  $li_i = 0;
 		  while(!$rs_solpag->EOF)

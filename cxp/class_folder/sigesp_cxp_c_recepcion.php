@@ -1575,7 +1575,7 @@ class sigesp_cxp_c_recepcion
 		// Fecha Creación: 12/05/2007 								Fecha Última Modificación : 27/07/2010 Ing. Nelson Barraez , se agrego filtro para estructuras presupuestarias asignadas
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$lb_valido=false;
-		$ls_sql="SELECT cxp_dt_solicitudes.codemp ".
+		echo $ls_sql="SELECT cxp_dt_solicitudes.codemp ".
 				"  FROM cxp_dt_solicitudes,cxp_rd_spg ".
 		  		" WHERE cxp_dt_solicitudes.codemp='".$this->ls_codemp."' ".
 				"   AND trim(cxp_dt_solicitudes.numrecdoc) = '".trim($as_numrecdoc)."' ".

@@ -2609,6 +2609,8 @@ class class_sigesp_sno_integracion
 				"             '".$ls_codpro."','".$as_concepto."','".$ad_fecha."','".$ad_fecha."','".$ad_fecha."',
 				"               .$ai_monto.",0,0,'".$ls_tipodestino."','".$as_numrecdoc."','R','SNOCNO',0,0,'1900-01-01','',0,'--','".$as_codfuefin."')";
 		$li_row=$this->io_sql->execute($ls_sql);
+
+
 		if($li_row===false)
 		{  
 			$this->io_msg->message("CLASE->Integración SNO MÉTODO->uf_insert_recepcion_documento ERROR->".$this->io_function->uf_convertirmsg($this->io_sql->message)); 

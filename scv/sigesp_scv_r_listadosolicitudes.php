@@ -86,6 +86,7 @@ a:active {
   </tr>
   <tr> 
     <td width="20" height="20" bgcolor="#FFFFFF" class="toolbar"><a href="javascript:uf_mostrar_reporte();"><img src="../shared/imagebank/tools20/imprimir.gif" alt="Imprimir" width="20" height="20" border="0" title="Imprimir"></a></td>
+    <td width="20"><a href="javascript: uf_mostrar_reporte_xls();"><img src="../shared/imagebank/tools20/excel.jpg" title="Excel" alt="Imprimir" width="20" height="20" border="0"></a></td>
     <td width="20" bgcolor="#FFFFFF" class="toolbar"><a href="sigespwindow_blank.php"><img src="../shared/imagebank/tools20/salir.gif" alt="Salir" width="20" height="20" border="0" title="Salir"></a></td>
     <td width="20" bgcolor="#FFFFFF" class="toolbar"><img src="../shared/imagebank/tools20/ayuda.gif" alt="Ayuda" width="20" height="20" title="Ayuda"></td>
     <td width="718" bgcolor="#FFFFFF" class="toolbar">&nbsp;</td>
@@ -294,6 +295,39 @@ else
 			}
 		}
 	}
+
+	function uf_mostrar_reporte_xls()
+	{
+		valido=ue_comparar_intervalo();
+		if(valido)
+		{
+			f=document.form1;
+			li_imprimir=f.imprimir.value;
+			formato=f.formato.value;
+			if(li_imprimir==1)
+			{
+				ld_desde= f.txtdesde.value;
+				ld_hasta= f.txthasta.value;
+				ls_coduniadm= f.txtcoduniadm.value;
+				ls_tiporeporte=f.cmbbsf.value;
+				for(i=0;i<f.radioorden.length;i++)
+					if(f.radioorden[i].checked) ls_orden=f.radioorden[i].value;
+				if ((ld_desde!="")&&(ld_hasta!=""))
+				{
+					window.open("reportes/sigesp_scv_rpp_listadosolicitudes_xls.php?orden="+ls_orden+"&desde="+ld_desde+"&hasta="+ld_hasta+"&coduniadm="+ls_coduniadm+"&tiporeporte="+ls_tiporeporte+"","catalogo","menubar=no,toolbar=no,scrollbars=yes,width=800,height=600,left=0,top=0,location=no,resizable=yes");
+				}
+				else
+				{
+					alert("Debe indicar un rango de fechas");
+				}
+			}
+			else
+			{
+				alert("No tiene permiso para realizar esta operación");
+			}
+		}
+	}
+
 
 function ue_cerrar()
 {

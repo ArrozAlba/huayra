@@ -7,7 +7,7 @@ protected function fConectar(){
    	$lcContrasena="20643647";
    	$lcPuerto = "5433";
    	$lcBaseDatos="arroz2013";*/
-   	$this->arCon=pg_connect("host= 192.168.2.5 port= 5432 dbname= db_arrozalba_2014 user= huayra password=SRVbd25GTINFA");
+   	$this->arCon=pg_connect("host= 192.168.2.5 port= 5432 dbname= db_arrozalba_2015 user= huayra password=SRVbd25GTINFA");
 }
 //ejecutar las sentencias con postrgres
 public function fQuery($sql){
@@ -25,7 +25,7 @@ public function fBuscarPersonal($ced, $codnom){
 	$this->fConectar();
 	$sql = "SELECT DISTINCT P.nomper, P.apeper, P.cedper, P.nacper, P.fecingper, PN.sueper, UA.desuniadm, C.descar, C.codcar 
 	FROM sno_personal AS P, sno_personalnomina AS PN, sno_unidadadmin AS UA, sno_cargo AS C
-	WHERE P.codper = PN.codper AND PN.prouniadm = UA.prouniadm AND PN.codcar = C.codcar AND P.cedper = '$ced' AND PN.codnom='$codnom'";
+	WHERE P.codper = PN.codper AND PN.prouniadm = UA.prouniadm AND PN.codcar = C.codcar AND P.cedper = '$ced' AND PN.codnom='$codnom' ORDER by PN.sueper DESC" ;
 	return ($this->fQuery($sql));	
 }
 /*
@@ -40,7 +40,7 @@ public function fProfesion($cedula, $codnom, $prima){
 	$this->fConectar();
 	$sql = "SELECT sno_conceptopersonal.aplcon FROM sno_conceptopersonal, sno_personal WHERE sno_personal.codper = sno_conceptopersonal.codper AND
  sno_personal.cedper='$cedula' and sno_conceptopersonal.codconc = '$prima' and sno_conceptopersonal.codnom = '$codnom'";
- return ($this->fQuery($sql));
+   return ($this->fQuery($sql));
 }
 
 public function fNroHijos($cedula, $codnom){
