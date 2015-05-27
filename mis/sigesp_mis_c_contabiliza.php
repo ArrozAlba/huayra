@@ -352,7 +352,7 @@ class sigesp_mis_c_contabiliza
 				$ls_criterio2="   AND fechaanula<>'1900-01-01' ";
 				break;
 		}
-		$ls_sql="SELECT numordcom, estcondat, fecordcom, obscom, fechaconta, fechaanula ".
+		echo $ls_sql="SELECT numordcom, estcondat, fecordcom, obscom, fechaconta, fechaanula ".
                 "  FROM soc_ordencompra ".
 				" WHERE codemp='".$ls_codemp."' ".
 				"   AND estcom=".$ai_estatus."  ".
