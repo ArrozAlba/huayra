@@ -14,6 +14,7 @@ sigesp_config.php
 sno/txt/*
 apr/config_apertura.php
 apr/resultado/*
+sno/clsConexion.php
 # -- Composer -----------------------------------------
 composer.phar
 
