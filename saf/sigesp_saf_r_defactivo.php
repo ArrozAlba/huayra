@@ -103,8 +103,18 @@ a:active {
     <td height="13" colspan="11" bgcolor="#E7E7E7" class="toolbar">&nbsp;</td>
   </tr>
   <tr> 
-    <td height="20" bgcolor="#FFFFFF" class="toolbar"><a href="javascript:uf_mostrar_reporte();"><img src="../shared/imagebank/tools20/imprimir.gif" alt="Imprimir" title="Imprimir" width="20" height="20" border="0"></a><a href="javascript:ue_cerrar();"><img src="../shared/imagebank/tools20/salir.gif" title="Salir" alt="Salir" width="20" height="20" border="0"></a><img src="../shared/imagebank/tools20/ayuda.gif" alt="Ayuda" width="20" title="Ayuda" height="20"></td>
+    <td height="20" bgcolor="#FFFFFF" class="toolbar"><a href="javascript:uf_mostrar_reporte();">
+    <img src="../shared/imagebank/tools20/imprimir.gif" alt="Imprimir" title="Imprimir" width="20" height="20" border="0"></a>
+    <a href="javascript:ue_cerrar();"><img src="../shared/imagebank/tools20/salir.gif" title="Salir" alt="Salir" width="20" height="20" border="0"></a>
+    <img src="../shared/imagebank/tools20/ayuda.gif" alt="Ayuda" width="20" title="Ayuda" height="20">
+    <a href="javascript:uf_mostrar_reporte_xls();">
+    <img src="../shared/imagebank/tools20/excel.jpg" alt="Imprimir a Calc" title="Imprimir a Calc" width="20" height="20" border="0"></a>
+
+    </td>
   </tr>
+
+
+
 </table>
 </div> 
 <p>&nbsp;</p>
@@ -253,6 +263,33 @@ function uf_mostrar_reporte()
 	else
 	{alert("No tiene permiso para realizar esta operación");}
 }
+//Imprimir en xls
+function uf_mostrar_reporte_xls()
+{
+  f=document.form1;
+  li_imprimir=f.imprimir.value;
+  if(li_imprimir==1)
+  {
+    ls_coddesde= f.txtcoddesde.value;
+    ls_codhasta= f.txtcodhasta.value;
+    tipoformato = f.cmbbsf.value;
+    ls_codresuso=f.txtcodresuso.value;
+    if(f.radioordenact[0].checked)
+    {
+      li_ordenact=0;
+    }
+    else
+    {
+      li_ordenact=1;
+    }
+    window.open("reportes/sigesp_saf_rpp_defactivo_xls.php?ordenact="+li_ordenact+"&coddesde="+ls_coddesde+"&codhasta="+ls_codhasta+"&tipoformato="+tipoformato+"&codresuso="+ls_codresuso,"catalogo","menubar=no,toolbar=no,scrollbars=yes,width=800,height=600,left=0,top=0,location=no,resizable=yes");
+  }
+  else
+  {alert("No tiene permiso para realizar esta operación");}
+}
+
+
+
 
 function ue_cerrar()
 {
