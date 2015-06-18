@@ -254,11 +254,11 @@ if ($ape!=""){
 	        $lobjPdf->SetFont('Arial', 'B', 12);
 	        $lobjPdf->WriteFlowingBlock($nac."-".$cedula);
 	    $lobjPdf->SetFont('Arial', '', 12);
-	    $lobjPdf->WriteFlowingBlock(utf8_decode(" presta sus servicios en esta institución desde:"));
+	    $lobjPdf->WriteFlowingBlock(utf8_decode(" presta sus servicios en esta institución desde el:"));
 	    $lobjPdf->SetFont('Arial', 'B', 12);
 	    $lobjPdf->WriteFlowingBlock($dia." de ".$mes." de ".$ano);
 	    $lobjPdf->SetFont('Arial', '', 12);
-		$lobjPdf->WriteFlowingBlock(utf8_decode(" y actualmente en calidad de:"));
+		$lobjPdf->WriteFlowingBlock(utf8_decode(" y actualmente en calidad de :"));
 	    $lobjPdf->SetFont('Arial', 'B', 12);
 	    $lobjPdf->WriteFlowingBlock($cargo);
 	    $lobjPdf->SetFont('Arial', '', 12);
@@ -398,11 +398,11 @@ if ($ape!=""){
 	        $lobjPdf->SetFont('Arial', 'B', 12);
 	        $lobjPdf->WriteFlowingBlock($nac."-".$cedula);
 	    $lobjPdf->SetFont('Arial', '', 12);
-	    $lobjPdf->WriteFlowingBlock(utf8_decode(" presta sus servicios en esta institución desde:"));
+	    $lobjPdf->WriteFlowingBlock(utf8_decode(" presta sus servicios en esta institución desde el:"));
 	    $lobjPdf->SetFont('Arial', 'B', 12);
 	    $lobjPdf->WriteFlowingBlock($dia." de ".$mes." de ".$ano);
 	    $lobjPdf->SetFont('Arial', '', 12);
-		$lobjPdf->WriteFlowingBlock(utf8_decode(" y actualmente en calidad de:"));
+		$lobjPdf->WriteFlowingBlock(utf8_decode(" y actualmente en calidad de: "));
 	    $lobjPdf->SetFont('Arial', 'B', 12);
 	    $lobjPdf->WriteFlowingBlock($cargo);
 	    $lobjPdf->SetFont('Arial', '', 12);
